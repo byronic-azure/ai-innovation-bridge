@@ -73,3 +73,15 @@ This blueprint outlines how to integrate neuromorphic (e.g., SpiNNaker, Hala Poi
 - [ ] Neuromorphic anomaly sidecars emitting metrics to autoscalers.
 - [ ] Circuit queue CRD/operator with fidelity and latency SLAs.
 - [ ] FinOps dashboard tracking watts-per-inference, tail latency, and avoided breach costs.
+
+## Integrating the IntelliWeb Microservice Stack (DD7 Unified Genesis)
+The supplied IntelliWeb artefacts (Dockerfiles, manifests, and Helm values) can be folded into this strategy to accelerate delivery:
+
+- **Hardened container images:** Reuse the existing two-stage Dockerfiles for `intelli_governance.py` and `api_service.py`, which already install dependencies in a virtual environment, drop to a non-root user, and set conscious-safety environment flags (`CONSCIOUSNESS_THRESHOLD`, `SWARM_AGENTS`). Keep them as base images for neuromorphic or quantum-enabled services and ensure multi-arch builds if you target ARM-based neuromorphic hardware.
+- **Config and secrets wiring:** Mount `intelliweb-config` and `intelliweb-equations` ConfigMaps for runtime parameters. Load sensitive values via `intelliweb-secrets` (or External Secrets) and reference them with `envFrom` in Deployments; avoid committing base64 secrets to source control.
+- **Deployment alignment:** Adopt the `intelliweb-api` Deployment as a template—non-root securityContext, resource requests/limits, pod anti-affinity, and topology spread constraints—and extend it with neuromorphic/quantum `RuntimeClass` hints plus device resource requests (e.g., `neuro.ai/spike`, `quantum.ai/qpu`). Attach the provided service account and RBAC rules to keep least privilege.
+- **Namespace and policy guardrails:** Use the `intelliweb` namespace manifest with quotas, LimitRanges, restrictive NetworkPolicies, and Pod Security Standards to isolate hardware-capable workloads from the rest of the cluster.
+- **Observability path:** Keep the ServiceMonitor/PodMonitor/PrometheusRule definitions to scrape `/metrics` every 15s and alert on drops in consciousness/governance metrics or blockchain stalls. Add Alloy/Prometheus scrape jobs for pods labeled `app=intelliweb` and propagate metrics into Grafana dashboards alongside neuromorphic/quantum telemetry.
+- **State and data plane hooks:** Point blockchain persistence to the Jellyfish Merkle Tree StatefulSet via the `RSFS_FEEDBACK_LOOP_URI` (or equivalent). Ensure neuromorphic anomaly microservices and quantum circuit queues emit metrics that the existing PrometheusRule set can track.
+- **Federated rollout:** In multi-cluster setups (e.g., `iua-10-clusters-federation.yaml`), include the IntelliWeb Deployment and mirror anti-affinity and node-affinity settings so neuromorphic/quantum nodes are utilized without hotspotting.
+- **Post-deploy checks:** After `deploy-unified-genesis.sh`, verify new blocks are written to Jellyfish, Grafana shows consciousness/governance metrics plus neuromorphic/quantum signals, and alerts fire when Φ or blockchain height violates thresholds. Use these outcomes to tune scheduler weights and FinOps dashboards.
