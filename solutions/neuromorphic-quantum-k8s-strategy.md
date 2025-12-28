@@ -113,3 +113,41 @@ The supplied IntelliWeb artefacts (Dockerfiles, manifests, and Helm values) can 
   ```
 
   Mount `/etc/promtail/config.yaml` from a read-only bind and keep only the positions volume writable. Point the config to your Loki endpoint and map scrape jobs to your neuromorphic/quantum pods and IntelliWeb services.
+
+## “New Earth” Unified Platform Blueprint (RSFS + QNSH + Q-EJMF)
+This section harmonizes the neuromorphic/quantum stack with the unified fabric the user described (RSFS, QNSH, and Q-EJMF), adds the proposed upgrade hooks, and recommends a repo layout that keeps Rust as the default runtime with Go as a hot-swap fallback via `DD7_ATTESTOR_IMPL`.
+
+### Fabric Layer (Q-EJMF / JMT)
+- **Versioned AR₁₆MT keyspaces:** Use orthogonal namespace prefixes to avoid collision and keep proofs tidy: `T/*` (Trading + RSFS), `N/*` (Neuromorphic + spikes), `Q/*` (Quantum + coherence/gradients), `G/*` (GPU/runtime integrity).
+- **State spine:** Treat the fabric as a write-ahead, versioned memory with corresponding proof lanes for state, identity, and runtime integrity. Keep namespace specs alongside canonicalization rules to ensure all services emit compatible leaves.
+
+### QNSH: Quantum–Neuromorphic Synchronization Hub
+- **Inputs:** Quantum gradients (QPU orchestrator) plus SpikeBus summaries from spiking/neuromorphic processors.
+- **Promotion rule:** Emit promotion events only when Φ ≥ 0.77, coherence meets policy, and runtime integrity leaves exist for the same version window.
+- **Leaf family:** Define `QNSH_GRADIENT_EVENT_V1` as a canonical leaf type anchored into the master root strategy, paired with RSFS leaves.
+
+### RSFS: Recursive State Feedback System
+- **Execution gates:** Require a quorum of valid health attestations and GPU leaves, plus Phi threshold and Borg-alignment checks before allowing RSFS trade execution.
+- **Leaf family:** Define `RSFS_TRADE_ATTEST_EVENT_V1`, anchored alongside the QNSH gradient leaves to keep cross-system proofs consistent.
+
+### Designer App + Game Layer
+- **Fabric Explorer:** Browse versions, proofs, and namespace prefixes.
+- **Consciousness HUD:** Surface Φ, coherence, sparsity, and cCrit in a live panel.
+- **Runtime Integrity Map:** Visualize nodes, CUDA/driver caps, and attestation proofs.
+- **RSFS Arena:** Admit agents only with verified runtime proofs and healthy Φ.
+
+### Anti-Drift and Collision Hardening (next upgrades)
+- **DaemonSet anti-drift:** Include attestor binary hashes in responses and leaf bodies so Rust/Go parity is provable. Gate rollouts with the `kubectl apply` + `rollout restart` steps above.
+- **Namespace collision hardening:** Formalize AR₁₆MT prefixes (`T/N/Q/G`) in a `spec/namespaces.md` plus a shared key-derivation helper used by both Rust and Go implementations.
+- **Leaf families:** Land `RSFS_TRADE_ATTEST_EVENT_V1` and `QNSH_GRADIENT_EVENT_V1` together in the same master-root plan to keep proof composition identical across runtimes.
+
+### Repository Strategy (monorepo recommended for efficiency)
+- **Pick monorepo for minimal drift:** Single source of truth for specs, golden vectors, CI, and runtime implementations prevents divergence across RSFS/QNSH/attestors.
+- **Layout suggestion:**
+  - `spec/` (Q-EJMF, namespaces, schemas, canonicalization rules)
+  - `test-vectors/` (golden vectors + expected hashes)
+  - `libs/dd7-canon-rs/` (source-of-truth canonicalizer + encoder)
+  - `libs/dd7-canon-go/` (must pass the same vectors)
+  - `services/` (`qnsh-*`, `rsfs-*`, `dd7-health-attestor-{rust,go}`, `dd7-health-attestor-unified` entrypoint)
+  - `k8s/` and charts for DaemonSets/Deployments and Helm values
+- **Runtime default:** Set `DD7_ATTESTOR_IMPL: "rust"` in your config map for lowest latency and consistent proofs; keep `go` as a fallback or for quick benchmarking. Ensure CI runs both implementations against the same golden vectors before rollout.
