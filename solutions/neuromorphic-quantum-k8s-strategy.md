@@ -84,6 +84,22 @@ The supplied IntelliWeb artefacts (Dockerfiles, manifests, and Helm values) can 
 - **Observability path:** Keep the ServiceMonitor/PodMonitor/PrometheusRule definitions to scrape `/metrics` every 15s and alert on drops in consciousness/governance metrics or blockchain stalls. Add Alloy/Prometheus scrape jobs for pods labeled `app=intelliweb` and propagate metrics into Grafana dashboards alongside neuromorphic/quantum telemetry.
 - **State and data plane hooks:** Point blockchain persistence to the Jellyfish Merkle Tree StatefulSet via the `RSFS_FEEDBACK_LOOP_URI` (or equivalent). Ensure neuromorphic anomaly microservices and quantum circuit queues emit metrics that the existing PrometheusRule set can track.
 - **Attestor implementation toggle:** Surface the attestor runtime in your configuration values (for example, `data: { DD7_ATTESTOR_IMPL: "rust" }`, with an optional `go` alternative) so operators can align the deployment with their preferred build and ensure downstream CRDs, sidecars, and admission policies target the right binaries.
+- **Attestor DaemonSet env wiring (example):** Keep the attestor pods pinned to an expected base image and known-good digests while sourcing the runtime toggle from the config map. Add an environment block like:
+
+  ```yaml
+  env:
+    - name: DD7_ATTESTOR_IMPL
+      valueFrom:
+        configMapKeyRef:
+          name: dd7-attestor-config
+          key: DD7_ATTESTOR_IMPL
+    - name: DD7_ALLOWED_IMAGE_DIGESTS
+      value: "sha256:4808ce840d8b3a502d5ccfb697f07645923abf72dec4bfc49bd95632858132be,sha256:7d68d324259fb88223b824de66f2b7710889ab3397641f8a18a28134576f46c9,sha256:657fa74539413d50c7993cf3042eaa9db1f7e4250e98cd19aa652d81f28ce901"
+    - name: DD7_NODE_BASE_IMAGE_EXPECTED
+      value: "gcr.io/k8s-minikube/kicbase:v0.0.31"
+  ```
+
+  The DaemonSet should reject nodes or images that fall outside these allowed digests and image expectations, making drift detection explicit when switching between Rust and Go builds.
 - **Attestor rollout steps:** When you update or toggle the attestor implementation, refresh the runtime DaemonSet so each node pulls the correct binary and configuration:
 
   ```bash
