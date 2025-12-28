@@ -1,0 +1,19 @@
+[package]
+name = "dd7-health-attestor"
+version = "0.1.0"
+edition = "2021"
+authors = ["DD7 Team"]
+description = "GPU Health Attestation service - Rust implementation"
+
+[[bin]]
+name = "dd7-health-attestor"
+path = "src/main.rs"
+
+[dependencies]
+actix-web = "4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+chrono = { version = "0.4", features = ["serde"] }
+env_logger = "0.11"
+log = "0.4"
