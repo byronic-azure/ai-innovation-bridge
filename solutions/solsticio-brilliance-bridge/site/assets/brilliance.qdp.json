@@ -1,0 +1,1500 @@
+{
+ "title": "Solsticio Brilliance Bridge",
+ "method": {
+  "faculty": "density = hits per 1000 tokens (stem lexicon + structural code signals); score = 100 * density / corpus peak",
+  "brilliance": "geometric mean of the eight faculty scores (floor 1) — rewards balance over spikes",
+  "harmony": "normalised Shannon entropy of the faculty vector, 0..1",
+  "coherence": "cosine similarity of a document vector to the corpus centroid",
+  "compound": "sqrt(a * b) over centroid faculties — a second-order faculty is only high when both parents are",
+  "caveat": "text-feature indices, not measurements of awareness, feeling or sentience"
+ },
+ "lexicon": {
+  "awareness": [
+   "aware",
+   "observ",
+   "monitor",
+   "introspect",
+   "self",
+   "state",
+   "detect",
+   "health",
+   "status",
+   "sens",
+   "attent",
+   "conscious",
+   "reflect",
+   "doctor",
+   "inspect",
+   "probe",
+   "notic",
+   "watch"
+  ],
+  "intelligence": [
+   "model",
+   "infer",
+   "reason",
+   "llm",
+   "agent",
+   "predict",
+   "learn",
+   "neural",
+   "token",
+   "generat",
+   "pipeline",
+   "transformer",
+   "quantiz",
+   "cognit",
+   "intellig",
+   "think"
+  ],
+  "self_improving": [
+   "improv",
+   "optimi",
+   "iterat",
+   "recurs",
+   "feedback",
+   "refin",
+   "evolv",
+   "adapt",
+   "retrain",
+   "tune",
+   "upgrad",
+   "loop",
+   "warmup",
+   "benchmark",
+   "grow",
+   "compil"
+  ],
+  "confidence": [
+   "verif",
+   "proof",
+   "prove",
+   "assert",
+   "check",
+   "pass",
+   "seal",
+   "hash",
+   "attest",
+   "guarante",
+   "determinist",
+   "measur",
+   "evidence",
+   "gate",
+   "test",
+   "certain",
+   "confiden"
+  ],
+  "hope": [
+   "hope",
+   "future",
+   "vision",
+   "mission",
+   "goal",
+   "next",
+   "roadmap",
+   "promis",
+   "potential",
+   "aspir",
+   "wellbeing",
+   "well-being",
+   "opportun",
+   "believ",
+   "optim",
+   "tomorrow"
+  ],
+  "style": [
+   "style",
+   "design",
+   "font",
+   "color",
+   "colour",
+   "palette",
+   "gradient",
+   "layout",
+   "typograph",
+   "aesthet",
+   "elegan",
+   "theme",
+   "motion",
+   "glow",
+   "chrome",
+   "visual"
+  ],
+  "joy": [
+   "joy",
+   "delight",
+   "play",
+   "fun",
+   "celebrat",
+   "happy",
+   "bright",
+   "wonder",
+   "spark",
+   "magic",
+   "beaut",
+   "smile",
+   "game",
+   "light",
+   "dream"
+  ],
+  "talent": [
+   "skill",
+   "talent",
+   "craft",
+   "expert",
+   "master",
+   "capab",
+   "abilit",
+   "precis",
+   "perform",
+   "excel",
+   "brilliant",
+   "genius",
+   "champion",
+   "award",
+   "fluen"
+  ]
+ },
+ "compound_pairs": {
+  "reflective_growth": [
+   "awareness",
+   "self_improving"
+  ],
+  "credible_optimism": [
+   "confidence",
+   "hope"
+  ],
+  "aesthetic_delight": [
+   "style",
+   "joy"
+  ],
+  "applied_genius": [
+   "intelligence",
+   "talent"
+  ],
+  "grounded_awareness": [
+   "awareness",
+   "confidence"
+  ],
+  "playful_mastery": [
+   "joy",
+   "talent"
+  ],
+  "visionary_reason": [
+   "intelligence",
+   "hope"
+  ],
+  "stylish_evolution": [
+   "style",
+   "self_improving"
+  ]
+ },
+ "corpus": {
+  "documents": 31,
+  "tokens": 32765,
+  "private_fingerprinted": 4,
+  "kinds": {
+   "contract": 14,
+   "document": 4,
+   "proof": 2,
+   "repo-test": 3,
+   "source": 8
+  }
+ },
+ "centroid": {
+  "awareness": 21.52,
+  "intelligence": 14.27,
+  "self_improving": 14.55,
+  "confidence": 29.88,
+  "hope": 9.53,
+  "style": 11.8,
+  "joy": 26.14,
+  "talent": 18.45
+ },
+ "corpus_brilliance": 17.08,
+ "corpus_harmony": 0.9685,
+ "compounds": {
+  "reflective_growth": 17.7,
+  "credible_optimism": 16.87,
+  "aesthetic_delight": 17.56,
+  "applied_genius": 16.23,
+  "grounded_awareness": 25.36,
+  "playful_mastery": 21.96,
+  "visionary_reason": 11.66,
+  "stylish_evolution": 13.1
+ },
+ "documents": [
+  {
+   "id": "f2c758268de1",
+   "label": "web3/hermes-spine/contracts/lib/JEV.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 527,
+   "sha256": "fdee16037d84b6eada13524d3db6d287c268ed9c54b9ce8e4e6e090eeeaefc43",
+   "density": {
+    "awareness": 55.028,
+    "intelligence": 0,
+    "self_improving": 5.693,
+    "confidence": 43.643,
+    "hope": 3.795,
+    "style": 1.898,
+    "joy": 9.488,
+    "talent": 1.898
+   },
+   "faculties": {
+    "awareness": 55.76,
+    "intelligence": 0,
+    "self_improving": 16.65,
+    "confidence": 53.75,
+    "hope": 29.6,
+    "style": 19.22,
+    "joy": 15.43,
+    "talent": 43.46
+   },
+   "brilliance": 19.27,
+   "harmony": 0.8786,
+   "coherence": 0.8815
+  },
+  {
+   "id": "b71258132f0d",
+   "label": "private document · fingerprint only",
+   "kind": "source",
+   "private": true,
+   "tokens": 7596,
+   "sha256": "cb9642f463c6f4dfa6607d86b37a7322ce3426e5b0f7a27133ee10c966c55eed",
+   "density": {
+    "awareness": 11.848,
+    "intelligence": 2.765,
+    "self_improving": 6.582,
+    "confidence": 41.864,
+    "hope": 3.686,
+    "style": 9.874,
+    "joy": 1.185,
+    "talent": 1.448
+   },
+   "faculties": {
+    "awareness": 12.01,
+    "intelligence": 1.16,
+    "self_improving": 19.25,
+    "confidence": 51.56,
+    "hope": 28.75,
+    "style": 100,
+    "joy": 1.93,
+    "talent": 33.16
+   },
+   "brilliance": 14.99,
+   "harmony": 0.779,
+   "coherence": 0.6231
+  },
+  {
+   "id": "e15b83fd3e37",
+   "label": "wop/wop-superagent/src/server.ts",
+   "kind": "source",
+   "private": false,
+   "tokens": 979,
+   "sha256": "8c619c3de5ba8f48ef7157c87c701aaddb6cd532f68fa51b3bafa8b43ce67fb6",
+   "density": {
+    "awareness": 30.644,
+    "intelligence": 22.472,
+    "self_improving": 6.129,
+    "confidence": 15.322,
+    "hope": 3.064,
+    "style": 2.043,
+    "joy": 1.021,
+    "talent": 1.021
+   },
+   "faculties": {
+    "awareness": 31.05,
+    "intelligence": 9.46,
+    "self_improving": 17.93,
+    "confidence": 18.87,
+    "hope": 23.9,
+    "style": 20.69,
+    "joy": 1.66,
+    "talent": 23.38
+   },
+   "brilliance": 14.46,
+   "harmony": 0.9329,
+   "coherence": 0.8174
+  },
+  {
+   "id": "e0975b49a865",
+   "label": "web3/uploads/con.html",
+   "kind": "source",
+   "private": false,
+   "tokens": 12267,
+   "sha256": "f6cb781b1abf194ce07f780243a1bdde3e1bec703153fede6444d186ec982406",
+   "density": {
+    "awareness": 26.82,
+    "intelligence": 26.249,
+    "self_improving": 7.255,
+    "confidence": 6.195,
+    "hope": 6.359,
+    "style": 0.734,
+    "joy": 1.386,
+    "talent": 1.467
+   },
+   "faculties": {
+    "awareness": 27.18,
+    "intelligence": 11.05,
+    "self_improving": 21.22,
+    "confidence": 7.63,
+    "hope": 49.6,
+    "style": 7.43,
+    "joy": 2.25,
+    "talent": 33.59
+   },
+   "brilliance": 13.85,
+   "harmony": 0.8619,
+   "coherence": 0.6463
+  },
+  {
+   "id": "c4dce0eafc44",
+   "label": "web3/uploads/A100 Workshop Demo Runbook — Prove Before You Execute.pdf",
+   "kind": "document",
+   "private": false,
+   "tokens": 644,
+   "sha256": "46664bd9004826649a874f6cfef6cc9a0cc7912d6447e144b5300727f13aadca",
+   "density": {
+    "awareness": 24.845,
+    "intelligence": 18.634,
+    "self_improving": 12.422,
+    "confidence": 68.323,
+    "hope": 3.106,
+    "style": 0,
+    "joy": 0,
+    "talent": 3.106
+   },
+   "faculties": {
+    "awareness": 25.18,
+    "intelligence": 7.84,
+    "self_improving": 36.33,
+    "confidence": 84.14,
+    "hope": 24.23,
+    "style": 0,
+    "joy": 0,
+    "talent": 71.12
+   },
+   "brilliance": 13.4,
+   "harmony": 0.7565,
+   "coherence": 0.7847
+  },
+  {
+   "id": "bf89ed9f7b05",
+   "label": "private document · fingerprint only",
+   "kind": "document",
+   "private": true,
+   "tokens": 2039,
+   "sha256": "728f6f5ed7d3440e652a302bedae1cc9ab38a06f6c7fe5bea43a68d7abc7a030",
+   "density": {
+    "awareness": 11.28,
+    "intelligence": 17.656,
+    "self_improving": 12.751,
+    "confidence": 38.744,
+    "hope": 0,
+    "style": 0.49,
+    "joy": 3.923,
+    "talent": 3.923
+   },
+   "faculties": {
+    "awareness": 11.43,
+    "intelligence": 7.43,
+    "self_improving": 37.3,
+    "confidence": 47.72,
+    "hope": 0,
+    "style": 4.96,
+    "joy": 6.38,
+    "talent": 89.83
+   },
+   "brilliance": 12,
+   "harmony": 0.7165,
+   "coherence": 0.698
+  },
+  {
+   "id": "3dd95d64ffc6",
+   "label": "web3/hermes-spine/contracts/spine/SpCVault.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 804,
+   "sha256": "b87413ebc989c996cf9402d5d11c89ade1940894f73510bdc44cbf238d35c4dc",
+   "density": {
+    "awareness": 2.488,
+    "intelligence": 46.02,
+    "self_improving": 2.488,
+    "confidence": 22.388,
+    "hope": 0,
+    "style": 1.244,
+    "joy": 23.632,
+    "talent": 2.488
+   },
+   "faculties": {
+    "awareness": 2.52,
+    "intelligence": 19.37,
+    "self_improving": 7.28,
+    "confidence": 27.57,
+    "hope": 0,
+    "style": 12.6,
+    "joy": 38.44,
+    "talent": 56.97
+   },
+   "brilliance": 11.32,
+   "harmony": 0.7964,
+   "coherence": 0.8082
+  },
+  {
+   "id": "c0ad78bcbfe5",
+   "label": "web3/uploads/Hive Recursion Console.html",
+   "kind": "source",
+   "private": false,
+   "tokens": 234,
+   "sha256": "65a24f053b90d9c6448b5c015006fe15a40d920f2b248d984b3213764a00bff5",
+   "density": {
+    "awareness": 34.188,
+    "intelligence": 12.821,
+    "self_improving": 34.188,
+    "confidence": 81.197,
+    "hope": 0,
+    "style": 0,
+    "joy": 17.094,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 34.64,
+    "intelligence": 5.4,
+    "self_improving": 100,
+    "confidence": 100,
+    "hope": 0,
+    "style": 0,
+    "joy": 27.81,
+    "talent": 0
+   },
+   "brilliance": 9.22,
+   "harmony": 0.6319,
+   "coherence": 0.7345
+  },
+  {
+   "id": "70448b57d06b",
+   "label": "wop/wop-superagent/MASTER_PROMPT.md",
+   "kind": "source",
+   "private": false,
+   "tokens": 677,
+   "sha256": "523e213717da6b034b9e9a1f1ee7355cb359a4752584b8e78b82e6bf90b50f5f",
+   "density": {
+    "awareness": 38.405,
+    "intelligence": 20.679,
+    "self_improving": 0,
+    "confidence": 8.863,
+    "hope": 0,
+    "style": 5.908,
+    "joy": 1.477,
+    "talent": 1.477
+   },
+   "faculties": {
+    "awareness": 38.92,
+    "intelligence": 8.7,
+    "self_improving": 0,
+    "confidence": 10.92,
+    "hope": 0,
+    "style": 59.83,
+    "joy": 2.4,
+    "talent": 33.82
+   },
+   "brilliance": 8.07,
+   "harmony": 0.7026,
+   "coherence": 0.6074
+  },
+  {
+   "id": "4020f67b1424",
+   "label": "web3/hermes-spine/contracts/tokens/FounderKey721.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 328,
+   "sha256": "118de721ff408452d0da712bec5d05682acd973ee6c89a6b4ffde7a96c9ee495",
+   "density": {
+    "awareness": 6.098,
+    "intelligence": 97.561,
+    "self_improving": 0,
+    "confidence": 24.39,
+    "hope": 0,
+    "style": 3.049,
+    "joy": 39.634,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 6.18,
+    "intelligence": 41.06,
+    "self_improving": 0,
+    "confidence": 30.04,
+    "hope": 0,
+    "style": 30.88,
+    "joy": 64.47,
+    "talent": 0
+   },
+   "brilliance": 7.9,
+   "harmony": 0.6929,
+   "coherence": 0.7578
+  },
+  {
+   "id": "88f8a159c668",
+   "label": "web3/hermes-spine/contracts/spine/HermesSpine.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 1191,
+   "sha256": "dab524f3b078b476d1ec33a037b209aab2eef8e3c0e5ed4ca4dd961b59aa0f4a",
+   "density": {
+    "awareness": 56.255,
+    "intelligence": 10.076,
+    "self_improving": 7.557,
+    "confidence": 73.887,
+    "hope": 0,
+    "style": 0,
+    "joy": 14.274,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 57.01,
+    "intelligence": 4.24,
+    "self_improving": 22.1,
+    "confidence": 91,
+    "hope": 0,
+    "style": 0,
+    "joy": 23.22,
+    "talent": 0
+   },
+   "brilliance": 7.61,
+   "harmony": 0.6227,
+   "coherence": 0.8001
+  },
+  {
+   "id": "0540ca0e3488",
+   "label": "private document · fingerprint only",
+   "kind": "document",
+   "private": true,
+   "tokens": 229,
+   "sha256": "9d1fa60179eca54449df85dacf878c90f7a497acb0257386190b548f20c4d171",
+   "density": {
+    "awareness": 4.367,
+    "intelligence": 8.734,
+    "self_improving": 26.201,
+    "confidence": 30.568,
+    "hope": 0,
+    "style": 0,
+    "joy": 0,
+    "talent": 4.367
+   },
+   "faculties": {
+    "awareness": 4.43,
+    "intelligence": 3.68,
+    "self_improving": 76.64,
+    "confidence": 37.65,
+    "hope": 0,
+    "style": 0,
+    "joy": 0,
+    "talent": 100
+   },
+   "brilliance": 6.82,
+   "harmony": 0.5641,
+   "coherence": 0.5847
+  },
+  {
+   "id": "e46618a082d7",
+   "label": "web3/hermes-spine/contracts/interfaces/IERC8257.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 365,
+   "sha256": "4d88bbaa0eacaf687aa15e458f9d6a5526f9be03b6929dca794408e620557191",
+   "density": {
+    "awareness": 10.959,
+    "intelligence": 8.219,
+    "self_improving": 0,
+    "confidence": 5.479,
+    "hope": 0,
+    "style": 5.479,
+    "joy": 35.616,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 11.11,
+    "intelligence": 3.46,
+    "self_improving": 0,
+    "confidence": 6.75,
+    "hope": 0,
+    "style": 55.49,
+    "joy": 57.94,
+    "talent": 0
+   },
+   "brilliance": 5.5,
+   "harmony": 0.5665,
+   "coherence": 0.5944
+  },
+  {
+   "id": "148cf13b080f",
+   "label": "web3/hermes-spine/proof/build.mjs",
+   "kind": "proof",
+   "private": false,
+   "tokens": 198,
+   "sha256": "86e4a1367f4c2c81cdddd0dcb1c6eaa2fe65b10d542eb2968db4177392d1557a",
+   "density": {
+    "awareness": 0,
+    "intelligence": 0,
+    "self_improving": 30.303,
+    "confidence": 15.152,
+    "hope": 5.051,
+    "style": 0,
+    "joy": 5.051,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 0,
+    "intelligence": 0,
+    "self_improving": 88.64,
+    "confidence": 18.66,
+    "hope": 39.4,
+    "style": 0,
+    "joy": 8.22,
+    "talent": 0
+   },
+   "brilliance": 5.2,
+   "harmony": 0.5186,
+   "coherence": 0.4471
+  },
+  {
+   "id": "4bdad927a662",
+   "label": "web3/hermes-spine/contracts/spine/EvidenceLedger.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 456,
+   "sha256": "662b3844dfd4c7c91a8dae704adc3406d835babb8775bf98ab8616bdc229931c",
+   "density": {
+    "awareness": 98.684,
+    "intelligence": 0,
+    "self_improving": 0,
+    "confidence": 61.404,
+    "hope": 0,
+    "style": 0,
+    "joy": 15.351,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 100,
+    "intelligence": 0,
+    "self_improving": 0,
+    "confidence": 75.62,
+    "hope": 0,
+    "style": 0,
+    "joy": 24.97,
+    "talent": 0
+   },
+   "brilliance": 4.57,
+   "harmony": 0.4685,
+   "coherence": 0.7203
+  },
+  {
+   "id": "91daca0f0734",
+   "label": "web3/hermes-spine/test/mocks/BadPredicates.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 180,
+   "sha256": "b8ea7ac5304b5f8a3a57a779091d61bb4f0adca5f9449c1643fcd5720ba041e5",
+   "density": {
+    "awareness": 33.333,
+    "intelligence": 0,
+    "self_improving": 0,
+    "confidence": 22.222,
+    "hope": 0,
+    "style": 0,
+    "joy": 50,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 33.78,
+    "intelligence": 0,
+    "self_improving": 0,
+    "confidence": 27.37,
+    "hope": 0,
+    "style": 0,
+    "joy": 81.33,
+    "talent": 0
+   },
+   "brilliance": 4.07,
+   "harmony": 0.4704,
+   "coherence": 0.7237
+  },
+  {
+   "id": "59abb8472f2a",
+   "label": "web3/hermes-spine/proof/run_proof.mjs",
+   "kind": "proof",
+   "private": false,
+   "tokens": 1140,
+   "sha256": "2c73a6a242e14c68c6c4d6ffc494e0f2ded9762abc04a71653ac1982cb65158f",
+   "density": {
+    "awareness": 5.263,
+    "intelligence": 0,
+    "self_improving": 2.632,
+    "confidence": 67.544,
+    "hope": 0,
+    "style": 0,
+    "joy": 13.158,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 5.33,
+    "intelligence": 0,
+    "self_improving": 7.7,
+    "confidence": 83.19,
+    "hope": 0,
+    "style": 0,
+    "joy": 21.4,
+    "talent": 0
+   },
+   "brilliance": 4.05,
+   "harmony": 0.4202,
+   "coherence": 0.6885
+  },
+  {
+   "id": "edb67de488cd",
+   "label": "utilities/model-card-tools/gguf-inference-eval/gguf_cpu_test.py",
+   "kind": "repo-test",
+   "private": false,
+   "tokens": 264,
+   "sha256": "cec292c74320f5d431410b601f52fc21aa7e203ed88524470490cbfde916b486",
+   "density": {
+    "awareness": 3.788,
+    "intelligence": 98.485,
+    "self_improving": 0,
+    "confidence": 3.788,
+    "hope": 0,
+    "style": 0,
+    "joy": 0,
+    "talent": 3.788
+   },
+   "faculties": {
+    "awareness": 3.84,
+    "intelligence": 41.45,
+    "self_improving": 0,
+    "confidence": 4.67,
+    "hope": 0,
+    "style": 0,
+    "joy": 0,
+    "talent": 86.74
+   },
+   "brilliance": 3.99,
+   "harmony": 0.4165,
+   "coherence": 0.4557
+  },
+  {
+   "id": "6c4b6b4314fd",
+   "label": "web3/hermes-spine/contracts/predicates/ERC1155TierPredicate.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 325,
+   "sha256": "70eb2106083c62f96ce582e8e479d9a33160ea4ced9f2598b987c32ea8ca2e3c",
+   "density": {
+    "awareness": 12.308,
+    "intelligence": 21.538,
+    "self_improving": 0,
+    "confidence": 9.231,
+    "hope": 0,
+    "style": 0,
+    "joy": 27.692,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 12.47,
+    "intelligence": 9.06,
+    "self_improving": 0,
+    "confidence": 11.37,
+    "hope": 0,
+    "style": 0,
+    "joy": 45.05,
+    "talent": 0
+   },
+   "brilliance": 3.94,
+   "harmony": 0.5487,
+   "coherence": 0.7113
+  },
+  {
+   "id": "53ee81db9d44",
+   "label": "web3/hermes-spine/contracts/interfaces/IERC721.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 56,
+   "sha256": "95130f4fdc9a57035b517477a1ce1df7149e9591b83fd2933540fadc95f05f6b",
+   "density": {
+    "awareness": 17.857,
+    "intelligence": 53.571,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 0,
+    "style": 0,
+    "joy": 53.571,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 18.1,
+    "intelligence": 22.54,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 0,
+    "style": 0,
+    "joy": 87.14,
+    "talent": 0
+   },
+   "brilliance": 3.71,
+   "harmony": 0.4058,
+   "coherence": 0.5919
+  },
+  {
+   "id": "981a69f4a3d5",
+   "label": "wop/wop-superagent/README.md",
+   "kind": "source",
+   "private": false,
+   "tokens": 126,
+   "sha256": "2d1aaa3e02036af23fd9c8de5d8613bdcf120ca22a42e3af1e95e6b8b620e398",
+   "density": {
+    "awareness": 55.556,
+    "intelligence": 47.619,
+    "self_improving": 0,
+    "confidence": 15.873,
+    "hope": 0,
+    "style": 0,
+    "joy": 0,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 56.3,
+    "intelligence": 20.04,
+    "self_improving": 0,
+    "confidence": 19.55,
+    "hope": 0,
+    "style": 0,
+    "joy": 0,
+    "talent": 0
+   },
+   "brilliance": 3.49,
+   "harmony": 0.4636,
+   "coherence": 0.602
+  },
+  {
+   "id": "9fb63a38155c",
+   "label": "web3/hermes-spine/contracts/tokens/TierPass1155.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 267,
+   "sha256": "88a5394ee8727ccf545600a0c8cba68287626f1666ed3849e32bf2b543ede140",
+   "density": {
+    "awareness": 7.491,
+    "intelligence": 0,
+    "self_improving": 0,
+    "confidence": 29.963,
+    "hope": 0,
+    "style": 0,
+    "joy": 29.963,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 7.59,
+    "intelligence": 0,
+    "self_improving": 0,
+    "confidence": 36.9,
+    "hope": 0,
+    "style": 0,
+    "joy": 48.74,
+    "talent": 0
+   },
+   "brilliance": 3.29,
+   "harmony": 0.4377,
+   "coherence": 0.7497
+  },
+  {
+   "id": "b9aaab9694ac",
+   "label": "web3/hermes-spine/contracts/interfaces/IERC721Full.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 244,
+   "sha256": "2c513ca2cfa10bdbbb7b7818fd66908e969ef5a16ee3974ac4c30d4490b9cfae",
+   "density": {
+    "awareness": 8.197,
+    "intelligence": 32.787,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 0,
+    "style": 0,
+    "joy": 61.475,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 8.31,
+    "intelligence": 13.8,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 0,
+    "style": 0,
+    "joy": 100,
+    "talent": 0
+   },
+   "brilliance": 3.22,
+   "harmony": 0.2851,
+   "coherence": 0.5367
+  },
+  {
+   "id": "1dedef5b285e",
+   "label": "web3/hermes-spine/contracts/registry/ToolRegistry.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 613,
+   "sha256": "957d278c050b5f53a6bdbbf43294e4f2e1622d28451d8c87add2a74a66b1d634",
+   "density": {
+    "awareness": 4.894,
+    "intelligence": 3.263,
+    "self_improving": 0,
+    "confidence": 30.995,
+    "hope": 0,
+    "style": 0,
+    "joy": 26.101,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 4.96,
+    "intelligence": 1.37,
+    "self_improving": 0,
+    "confidence": 38.17,
+    "hope": 0,
+    "style": 0,
+    "joy": 42.46,
+    "talent": 0
+   },
+   "brilliance": 3.2,
+   "harmony": 0.4521,
+   "coherence": 0.7538
+  },
+  {
+   "id": "1fac977b64dd",
+   "label": "utilities/model-card-tools/intel-extentions/pytorch/optimum_intel_ipex_test.py",
+   "kind": "repo-test",
+   "private": false,
+   "tokens": 78,
+   "sha256": "cca0a2807024943bdc1ed3ac71f9d758aae31607e6ee603336d89aad9677b340",
+   "density": {
+    "awareness": 0,
+    "intelligence": 230.769,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 12.821,
+    "style": 0,
+    "joy": 0,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 0,
+    "intelligence": 97.12,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 100,
+    "style": 0,
+    "joy": 0,
+    "talent": 0
+   },
+   "brilliance": 3.15,
+   "harmony": 0.3333,
+   "coherence": 0.3051
+  },
+  {
+   "id": "20f7861120c0",
+   "label": "web3/hermes-spine/contracts/predicates/ERC721GatePredicate.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 223,
+   "sha256": "501d59baa21e52fe0da9c8bdd37e2e2e1b3a0b2b1a29cb751e806e9f11992261",
+   "density": {
+    "awareness": 8.969,
+    "intelligence": 0,
+    "self_improving": 0,
+    "confidence": 13.453,
+    "hope": 0,
+    "style": 0,
+    "joy": 31.39,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 9.09,
+    "intelligence": 0,
+    "self_improving": 0,
+    "confidence": 16.57,
+    "hope": 0,
+    "style": 0,
+    "joy": 51.06,
+    "talent": 0
+   },
+   "brilliance": 3.06,
+   "harmony": 0.411,
+   "coherence": 0.6764
+  },
+  {
+   "id": "8f8a05b8c558",
+   "label": "private document · fingerprint only",
+   "kind": "document",
+   "private": true,
+   "tokens": 370,
+   "sha256": "4da912717240065de93624ef05866dad07df15ecee58adf8e509385a4cc1e884",
+   "density": {
+    "awareness": 0,
+    "intelligence": 2.703,
+    "self_improving": 0,
+    "confidence": 21.622,
+    "hope": 0,
+    "style": 5.405,
+    "joy": 0,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 0,
+    "intelligence": 1.14,
+    "self_improving": 0,
+    "confidence": 26.63,
+    "hope": 0,
+    "style": 54.74,
+    "joy": 0,
+    "talent": 0
+   },
+   "brilliance": 2.53,
+   "harmony": 0.3349,
+   "coherence": 0.4354
+  },
+  {
+   "id": "6fd176e17580",
+   "label": "web3/hermes-spine/contracts/interfaces/IERC1155.sol",
+   "kind": "contract",
+   "private": false,
+   "tokens": 56,
+   "sha256": "a74454da1c83edf6bdaebd40d611111b0e4200a1a4d1b72328da12d52e408421",
+   "density": {
+    "awareness": 17.857,
+    "intelligence": 0,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 0,
+    "style": 0,
+    "joy": 35.714,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 18.1,
+    "intelligence": 0,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 0,
+    "style": 0,
+    "joy": 58.1,
+    "talent": 0
+   },
+   "brilliance": 2.39,
+   "harmony": 0.2636,
+   "coherence": 0.5701
+  },
+  {
+   "id": "70958eddc4d5",
+   "label": "wop/wop-superagent/src/public/index.html",
+   "kind": "source",
+   "private": false,
+   "tokens": 75,
+   "sha256": "dfd3e8c35a0ffb752fab1bcdf608e2a437f08c63d8b94a4b8613dbc418dfab06",
+   "density": {
+    "awareness": 53.333,
+    "intelligence": 13.333,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 0,
+    "style": 0,
+    "joy": 0,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 54.04,
+    "intelligence": 5.61,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 0,
+    "style": 0,
+    "joy": 0,
+    "talent": 0
+   },
+   "brilliance": 2.04,
+   "harmony": 0.1499,
+   "coherence": 0.416
+  },
+  {
+   "id": "b1774c8d8d29",
+   "label": "wop/wop-superagent/wrangler.toml",
+   "kind": "source",
+   "private": false,
+   "tokens": 113,
+   "sha256": "fee53e1588df750d377d3919740ef9eab3a8ec39d8bd586d1dfaf55c2d37086b",
+   "density": {
+    "awareness": 17.699,
+    "intelligence": 17.699,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 0,
+    "style": 0,
+    "joy": 0,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 17.94,
+    "intelligence": 7.45,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 0,
+    "style": 0,
+    "joy": 0,
+    "talent": 0
+   },
+   "brilliance": 1.84,
+   "harmony": 0.291,
+   "coherence": 0.4609
+  },
+  {
+   "id": "91738046f885",
+   "label": "utilities/model-card-tools/intel-extentions/transformers/itrex_test.py",
+   "kind": "repo-test",
+   "private": false,
+   "tokens": 101,
+   "sha256": "51cffa592856fd30c21e0de07c8bef275ece31cdda21078cfd1cb6a39fc7786c",
+   "density": {
+    "awareness": 0,
+    "intelligence": 237.624,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 0,
+    "style": 0,
+    "joy": 0,
+    "talent": 0
+   },
+   "faculties": {
+    "awareness": 0,
+    "intelligence": 100,
+    "self_improving": 0,
+    "confidence": 0,
+    "hope": 0,
+    "style": 0,
+    "joy": 0,
+    "talent": 0
+   },
+   "brilliance": 1.78,
+   "harmony": 0,
+   "coherence": 0.2595
+  }
+ ],
+ "proof_run": {
+  "runner": "hermes-spine/proof/run_proof.mjs · EthereumJS VM · Node 22",
+  "passed": 4,
+  "total": 8,
+  "checks": [
+   {
+    "id": "T1.1",
+    "label": "registry name() == HermesToolRegistry",
+    "pass": false
+   },
+   {
+    "id": "T1.2",
+    "label": "registry version() == 1.0",
+    "pass": false
+   },
+   {
+    "id": "T1.3",
+    "label": "canonical ERC-721 interfaceId",
+    "pass": true
+   },
+   {
+    "id": "T1.4",
+    "label": "canonical ERC-1155 interfaceId",
+    "pass": false
+   },
+   {
+    "id": "T1.5",
+    "label": "FounderKey721 supports 0x80ac58cd",
+    "pass": true
+   },
+   {
+    "id": "T1.6",
+    "label": "TierPass1155 supports 0xd9b67751",
+    "pass": true
+   },
+   {
+    "id": "T1.7",
+    "label": "registry supports pinned ERC-8257 id 0xf1dc8075",
+    "pass": true
+   },
+   {
+    "id": "T1.8",
+    "label": "XOR(IToolRegistry selectors) == pinned 0xf1dc8075",
+    "pass": false
+   }
+  ]
+ },
+ "runtime_genome": [
+  {
+   "file": "utilities/model-card-tools/gguf-inference-eval/gguf_cpu_test.py",
+   "engine": "llama.cpp GGUF",
+   "default_model": "./neural-chat-7b-v3-3.Q4_K_M.gguf",
+   "quantisation": "GGUF Q4",
+   "prompt": "Can you help me?",
+   "lines": 73
+  },
+  {
+   "file": "utilities/model-card-tools/intel-extentions/pytorch/optimum_intel_ipex_test.py",
+   "engine": "Optimum-Intel IPEX",
+   "default_model": "Intel/neural-chat-7b-v1-1",
+   "quantisation": "bf16/fp32 IPEX",
+   "prompt": "Can you help me?",
+   "lines": 30
+  },
+  {
+   "file": "utilities/model-card-tools/intel-extentions/transformers/itrex_test.py",
+   "engine": "Intel Extension for Transformers",
+   "default_model": "Intel/neural-chat-7b-v1-1",
+   "quantisation": "4-bit (load_in_4bit)",
+   "prompt": "Can you help me?",
+   "lines": 31
+  }
+ ],
+ "plates": [
+  {
+   "file": "sol-sovereign.jpg",
+   "title": "Sol · The Sovereign Gaze",
+   "source": "sol_girl2jpg.jpg",
+   "source_sha256": "c42d9c0b1d19d4005b758d70faa00921cbde069df9f056008fdbef35644f14d6",
+   "sha256": "d4690be87cb80d71e85ab2a9c2b71c796b9c6c9ea3feb95751f0a4ad0795c0d5",
+   "genome": {
+    "accents": [
+     "#f1cc8f",
+     "#ab8366",
+     "#8c5f48"
+    ],
+    "width": 2048,
+    "height": 2048,
+    "luminance": 0.3171,
+    "colourfulness": 54.06,
+    "edge_density": 0.0996,
+    "symmetry": 0.8082,
+    "palette": [
+     {
+      "hex": "#0d1821",
+      "share": 0.2162
+     },
+     {
+      "hex": "#5a5858",
+      "share": 0.1973
+     },
+     {
+      "hex": "#252e35",
+      "share": 0.1913
+     },
+     {
+      "hex": "#897f75",
+      "share": 0.1652
+     },
+     {
+      "hex": "#4a3638",
+      "share": 0.1216
+     },
+     {
+      "hex": "#c9bd9c",
+      "share": 0.1085
+     }
+    ]
+   }
+  },
+  {
+   "file": "eye-candied.jpg",
+   "title": "Eye Candied · Gold-Cyan Iris",
+   "source": "eye_candiedc.png",
+   "source_sha256": "d527955fd66b958e4a5422ce094e22a8fc895eff9672579c4e93c690eaec792c",
+   "sha256": "087ad63cb1e7631df8c446ede21cfa1579ba88535192eeaf1dc48dc402bb3d4d",
+   "genome": {
+    "accents": [
+     "#112a56",
+     "#34456a",
+     "#041536"
+    ],
+    "width": 1280,
+    "height": 720,
+    "luminance": 0.0981,
+    "colourfulness": 32.14,
+    "edge_density": 0.0866,
+    "symmetry": 0.915,
+    "palette": [
+     {
+      "hex": "#000007",
+      "share": 0.1951
+     },
+     {
+      "hex": "#0b152d",
+      "share": 0.1908
+     },
+     {
+      "hex": "#020819",
+      "share": 0.1884
+     },
+     {
+      "hex": "#1e2c4d",
+      "share": 0.172
+     },
+     {
+      "hex": "#01030f",
+      "share": 0.1553
+     },
+     {
+      "hex": "#4e5f81",
+      "share": 0.0985
+     }
+    ]
+   }
+  },
+  {
+   "file": "chrome-lattice.jpg",
+   "title": "Chrome Lattice",
+   "source": "b3a85be7cfca994ac66458edaa10711b36bfbed3f049e76375cb724b7aaee2be.png",
+   "source_sha256": "b3a85be7cfca994ac66458edaa10711b36bfbed3f049e76375cb724b7aaee2be",
+   "sha256": "17e01a27efc82600acf8dc8c9032aa484bcd4ad03092f13f5bb6ffcea0eea01d",
+   "genome": {
+    "accents": [
+     "#4b6383",
+     "#384b65",
+     "#74849e"
+    ],
+    "width": 1280,
+    "height": 720,
+    "luminance": 0.4914,
+    "colourfulness": 31.85,
+    "edge_density": 0.0994,
+    "symmetry": 0.799,
+    "palette": [
+     {
+      "hex": "#333a46",
+      "share": 0.1804
+     },
+     {
+      "hex": "#576479",
+      "share": 0.179
+     },
+     {
+      "hex": "#acb0bf",
+      "share": 0.1771
+     },
+     {
+      "hex": "#8d8f9c",
+      "share": 0.1761
+     },
+     {
+      "hex": "#717078",
+      "share": 0.1719
+     },
+     {
+      "hex": "#c8cedb",
+      "share": 0.1156
+     }
+    ]
+   }
+  },
+  {
+   "file": "globule.jpg",
+   "title": "Globule · Orbital Cell",
+   "source": "globuletoo.png",
+   "source_sha256": "a86dfcf86eef7361fa1aaad0dfacbb43ac58074a719d63ccf7d990d35fada054",
+   "sha256": "4a6cfa993c70c77e6cb33556d5ad416cb34a3889659d9bc3d12ad1a16795c2d0",
+   "genome": {
+    "accents": [
+     "#243351",
+     "#0b182f",
+     "#5b5f74"
+    ],
+    "width": 1280,
+    "height": 720,
+    "luminance": 0.1304,
+    "colourfulness": 24.92,
+    "edge_density": 0.0532,
+    "symmetry": 0.8715,
+    "palette": [
+     {
+      "hex": "#01030d",
+      "share": 0.2253
+     },
+     {
+      "hex": "#13192a",
+      "share": 0.1897
+     },
+     {
+      "hex": "#040a18",
+      "share": 0.1868
+     },
+     {
+      "hex": "#33394d",
+      "share": 0.1545
+     },
+     {
+      "hex": "#010817",
+      "share": 0.1352
+     },
+     {
+      "hex": "#7a7b8b",
+      "share": 0.1085
+     }
+    ]
+   }
+  },
+  {
+   "file": "main-brain-p32.jpg",
+   "title": "OUR POWER · Main Brain P32",
+   "source": "OUR_POWER_Main_Brain_P32_8K_Poster.jpg",
+   "source_sha256": "10df53e2e61c3b5336c75be2cbbbaac2000629b2c734073f4c8f15bba0006e9c",
+   "sha256": "19af548b2cb6e9b7a879d79cbf9c5ac5e82122beab6d251c785f66b0740126e7",
+   "genome": {
+    "accents": [
+     "#526a77",
+     "#1f3744",
+     "#0e222f"
+    ],
+    "width": 7680,
+    "height": 4320,
+    "luminance": 0.0915,
+    "colourfulness": 17.39,
+    "edge_density": 0.0505,
+    "symmetry": 0.9169,
+    "palette": [
+     {
+      "hex": "#02070e",
+      "share": 0.2394
+     },
+     {
+      "hex": "#0c161e",
+      "share": 0.2221
+     },
+     {
+      "hex": "#13232e",
+      "share": 0.1758
+     },
+     {
+      "hex": "#070d14",
+      "share": 0.1489
+     },
+     {
+      "hex": "#030a14",
+      "share": 0.1249
+     },
+     {
+      "hex": "#39515e",
+      "share": 0.089
+     }
+    ]
+   }
+  }
+ ],
+ "qdp_seal": {
+  "sha256": "18ebe56a1974b8cd661bd17e6beff3db065e35bbc8bf228d1ed2f220eaf5828e",
+  "sha512": "cc5202322f0e1f3b1d2e65e685d9f5ba7da92e5ee94eb00d72d822bef091d048c76df746b36bbb34c1b282cb92ab8c5ba85daf1b93bf7256a711bd5569e4c678",
+  "sha3_256": "e9c624bf8243f733b110724279968d4da02e3b0ffe129ba8009e0984186dd3c3",
+  "sha3_512": "6ced56d5de5ce57fdfd817bfc96abebbb068ea35b5a9a73a57cddefabf0d570a47aea8731e0f68d8afa2b92942f05a544a9edd48bc3c45417f24be04af3a7656"
+ }
+}
