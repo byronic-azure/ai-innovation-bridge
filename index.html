@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SOLSTICIO · Brilliance Bridge</title>
+<meta name="description" content="Eight-faculty brilliance extraction over the AI Innovation Bridge test corpus, Hermes proofs and Solsticio artefacts — QDP sealed.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#03060c;--ink2:#070d18;--panel:rgba(10,18,32,.72);--bd:rgba(120,170,255,.14);--bd2:rgba(120,170,255,.28);
+--cy:#3ad7ff;--cy2:#9be9ff;--bl:#2f6bff;--ag:#c9d3e3;--ag2:#8994a8;--au:#f1cc8f;--au2:#d9a441;--mg:#ff3fb4;--ok:#4dffb8;--no:#ff5a6a;
+--mono:'JetBrains Mono',monospace;--disp:'Michroma',sans-serif;--body:'Rajdhani',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--ink)}
+body{font-family:var(--body);color:var(--ag);background:radial-gradient(1200px 700px at 80% -10%,rgba(47,107,255,.16),transparent 60%),radial-gradient(900px 600px at -10% 40%,rgba(58,215,255,.07),transparent 60%),var(--ink);font-size:17px;line-height:1.55;overflow-x:hidden}
+a{color:var(--cy)}
+.mono{font-family:var(--mono)}
+.chrome{background:linear-gradient(180deg,#fff 0%,#dfe7f3 28%,#7f8ba0 52%,#f4f8ff 62%,#9aa7bd 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gold{background:linear-gradient(180deg,#fff3d6,#f1cc8f 45%,#b8843d 75%,#ffe3a8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cyan{color:var(--cy)}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:1.4rem;padding:.75rem 2rem;background:linear-gradient(180deg,rgba(3,6,12,.92),rgba(3,6,12,.55));backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+nav .brand{font-family:var(--disp);font-size:.72rem;letter-spacing:.32em}
+nav .links{display:flex;gap:1.1rem;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+nav .links a{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:var(--ag2);text-decoration:none;white-space:nowrap;transition:color .2s}
+nav .links a:hover,nav .links a.on{color:var(--cy)}
+.hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:2rem;padding:7rem 4vw 4rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url(assets/eye-candied.jpg) center/cover no-repeat;opacity:.38;transform:scale(1.08);filter:saturate(1.15)}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 8%,rgba(3,6,12,.6) 55%,rgba(3,6,12,.25)),linear-gradient(0deg,var(--ink),transparent 35%)}
+#hero-fx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-txt{position:relative;z-index:2}
+.kicker{font-family:var(--mono);font-size:.64rem;letter-spacing:.34em;color:var(--cy);display:flex;align-items:center;gap:.8rem}
+.kicker::before{content:'';width:42px;height:1px;background:var(--cy);box-shadow:0 0 12px var(--cy)}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.2rem,5.6vw,5.2rem);line-height:1.02;letter-spacing:.04em;margin:1.2rem 0 1.3rem}
+h1 small{display:block;font-size:.34em;letter-spacing:.42em;margin-top:.9rem}
+.lede{max-width:40rem;font-size:1.14rem;color:#b5c0d2}
+.lede b{color:#fff;font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.7rem;margin-top:2.2rem;max-width:44rem}
+.stat{border:1px solid var(--bd);background:var(--panel);padding:.75rem .8rem;border-radius:3px;position:relative;overflow:hidden}
+.stat::after{content:'';position:absolute;left:0;top:0;height:1px;width:100%;background:linear-gradient(90deg,transparent,var(--cy),transparent);opacity:.6}
+.stat b{display:block;font-family:var(--disp);font-size:1.25rem;color:#fff;font-weight:400}
+.stat span{font-family:var(--mono);font-size:.52rem;letter-spacing:.16em;color:var(--ag2)}
+.hero-sol{position:relative;z-index:2;justify-self:center;width:min(500px,90%);aspect-ratio:1;border-radius:50%;padding:3px;background:conic-gradient(from 210deg,var(--cy),transparent 25%,var(--au) 45%,transparent 60%,var(--mg) 78%,transparent 88%,var(--cy));animation:spin 18s linear infinite}
+.hero-sol img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;animation:spin 18s linear infinite reverse;filter:contrast(1.05)}
+.hero-sol::before{content:'';position:absolute;inset:-28px;border-radius:50%;border:1px dashed rgba(58,215,255,.25)}
+.hero-sol .orb{position:absolute;inset:-14%;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(58,215,255,.18),transparent 62%);filter:blur(10px);z-index:-1}
+@keyframes spin{to{transform:rotate(1turn)}}
+section{position:relative;padding:5.5rem 4vw 2rem;max-width:1480px;margin:0 auto}
+.sec{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.4rem;flex-wrap:wrap}
+.sec .k{font-family:var(--mono);font-size:.7rem;color:var(--cy);letter-spacing:.2em}
+.sec h2{font-family:var(--disp);font-weight:400;font-size:clamp(1.3rem,2.6vw,2.1rem);letter-spacing:.08em}
+.sec .ln{flex:1;height:1px;background:linear-gradient(90deg,var(--bd2),transparent);min-width:40px}
+.sec .nt{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:var(--ag2)}
+.lede2{max-width:64rem;color:#a7b3c6;margin-bottom:1.6rem}.lede2 b{color:#fff;font-weight:600}
+.panel{border:1px solid var(--bd);background:var(--panel);backdrop-filter:blur(10px);border-radius:4px;position:relative}
+.ptitle{display:flex;justify-content:space-between;align-items:center;gap:.8rem;padding:.65rem .95rem;border-bottom:1px solid var(--bd);font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;color:var(--ag2)}
+.pb{padding:1rem}
+.tag{font-family:var(--mono);font-size:.52rem;letter-spacing:.14em;padding:.22rem .55rem;border:1px solid var(--bd2);color:var(--ag);border-radius:2px;background:transparent;white-space:nowrap}
+button.tag{cursor:pointer;transition:all .2s}button.tag:hover{border-color:var(--cy);color:var(--cy)}
+.tag.on,.tag.c{color:var(--cy);border-color:rgba(58,215,255,.55);box-shadow:0 0 14px rgba(58,215,255,.15) inset}
+.tag.ok{color:var(--ok);border-color:rgba(77,255,184,.5)}.tag.no{color:var(--no);border-color:rgba(255,90,106,.5)}.tag.au{color:var(--au);border-color:rgba(241,204,143,.5)}
+.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:1.2rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+#radar{width:100%;height:auto;display:block}
+.facs{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
+.fac{border:1px solid var(--bd);padding:.7rem .8rem;border-radius:3px;cursor:pointer;transition:border-color .2s,transform .2s;background:rgba(5,10,20,.5)}
+.fac:hover,.fac.on{border-color:var(--cy);transform:translateY(-2px)}
+.fac .n{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:var(--ag2)}
+.fac .n b{font-family:var(--disp);font-size:1rem;color:#fff;font-weight:400;letter-spacing:0}
+.fac .bar{height:3px;background:rgba(255,255,255,.06);margin:.5rem 0 .4rem;border-radius:2px;overflow:hidden}
+.fac .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--bl),var(--cy));box-shadow:0 0 10px var(--cy);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.fac p{font-size:.82rem;color:#8f9bb0;line-height:1.35}
+.sel{font-family:var(--mono);font-size:.62rem;color:var(--ag2);margin-top:.8rem}
+select{max-width:100%}
+.grid2>*,.lab>*,.hero>*{min-width:0}
+select,input[type=search]{background:rgba(3,6,12,.8);border:1px solid var(--bd2);color:var(--ag);font-family:var(--mono);font-size:.65rem;padding:.45rem .6rem;border-radius:2px;outline:none}
+select:focus,input:focus{border-color:var(--cy)}
+.comp{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+.cp{border:1px solid var(--bd);border-radius:3px;padding:.9rem;background:linear-gradient(160deg,rgba(47,107,255,.08),rgba(3,6,12,.4));position:relative;overflow:hidden}
+.cp .v{font-family:var(--disp);font-size:1.7rem;color:#fff}
+.cp .t{font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;color:var(--cy);margin-bottom:.4rem}
+.cp .f{font-family:var(--mono);font-size:.56rem;color:var(--ag2);margin-top:.35rem}
+.cp svg{position:absolute;right:-10px;bottom:-10px;opacity:.5}
+.field-wrap{position:relative}
+#field{width:100%;height:560px;display:block;border-radius:4px;cursor:crosshair}
+.dossier{position:absolute;top:1rem;right:1rem;width:min(330px,80%);pointer-events:none;opacity:0;transform:translateY(6px);transition:all .25s}
+.dossier.on{opacity:1;transform:none}
+.dossier .pb{font-family:var(--mono);font-size:.6rem;line-height:1.7;word-break:break-all}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.legend span{font-family:var(--mono);font-size:.56rem;letter-spacing:.12em;display:flex;align-items:center;gap:.35rem}
+.legend i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.tools{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin-bottom:.9rem}
+.tbl{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:.62rem}
+.tbl th{position:sticky;top:0;background:#08111f;text-align:right;padding:.55rem .45rem;color:var(--ag2);font-weight:400;letter-spacing:.1em;cursor:pointer;border-bottom:1px solid var(--bd2);white-space:nowrap}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
+.tbl th.on{color:var(--cy)}
+.tbl td{padding:.45rem;border-bottom:1px solid rgba(120,170,255,.06);text-align:right;white-space:nowrap}
+.tbl td:first-child{max-width:340px;overflow:hidden;text-overflow:ellipsis}
+.tbl tr:hover td{background:rgba(58,215,255,.05)}
+.tbl .heat{display:inline-block;min-width:2.6rem;padding:.1rem .25rem;border-radius:2px}
+.tblwrap{max-height:520px;overflow:auto}
+.lab{display:grid;grid-template-columns:330px 1fr;gap:1.2rem}
+.sl{margin-bottom:.75rem}
+.sl label{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;color:var(--ag2);margin-bottom:.25rem}
+.sl label b{color:var(--cy);font-weight:400}
+.sl small{display:block;font-family:var(--mono);font-size:.5rem;color:#5d6880;margin-top:.15rem}
+input[type=range]{width:100%;-webkit-appearance:none;appearance:none;height:3px;background:linear-gradient(90deg,var(--bl),var(--cy));border-radius:2px;outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(58,215,255,.3),0 0 14px var(--cy);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;border:none;box-shadow:0 0 14px var(--cy)}
+#art{width:100%;aspect-ratio:16/9;display:block;border-radius:4px;background:#02040a}
+.btn{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;padding:.6rem .95rem;border:1px solid var(--cy);color:var(--cy);background:rgba(58,215,255,.06);cursor:pointer;border-radius:2px;transition:all .2s}
+.btn:hover{background:var(--cy);color:var(--ink);box-shadow:0 0 22px rgba(58,215,255,.45)}
+.btn.au{border-color:var(--au);color:var(--au);background:rgba(241,204,143,.06)}.btn.au:hover{background:var(--au);color:var(--ink)}
+.rank{font-family:var(--mono);font-size:.6rem;margin-top:.9rem;line-height:1.75}
+.rank div{display:flex;justify-content:space-between;gap:.6rem;border-bottom:1px solid rgba(120,170,255,.06)}
+.rank div span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.receipt{font-family:var(--mono);font-size:.56rem;line-height:1.6;word-break:break-all;color:var(--ag2);margin-top:.8rem;min-height:3rem}
+.receipt b{color:var(--au);font-weight:400}
+.check{display:flex;justify-content:space-between;gap:1rem;font-family:var(--mono);font-size:.62rem;padding:.42rem 0;border-bottom:1px solid rgba(120,170,255,.07)}
+.check .r{letter-spacing:.14em}.ok{color:var(--ok)}.no{color:var(--no)}.dim{color:var(--ag2)}
+.gen{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.gc{border:1px solid var(--bd);border-radius:3px;padding:.9rem;background:rgba(5,10,20,.5)}
+.gc h4{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--cy);font-weight:400;margin-bottom:.5rem;word-break:break-all}
+.gc dl{display:grid;grid-template-columns:auto 1fr;gap:.2rem .8rem;font-family:var(--mono);font-size:.6rem}
+.gc dt{color:var(--ag2)}.gc dd{color:#fff;text-align:right;word-break:break-all}
+.plates{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.plate{grid-column:span 2;border:1px solid var(--bd);border-radius:4px;overflow:hidden;background:#050a14;cursor:zoom-in;transition:transform .35s,border-color .35s}
+.plate:nth-child(4),.plate:nth-child(5){grid-column:span 3}
+.plate:hover{transform:translateY(-4px);border-color:var(--cy)}
+.plate img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;transition:transform .6s}
+.plate:hover img{transform:scale(1.04)}
+.plate .cap{padding:.7rem .85rem}
+.plate .cap b{font-family:var(--disp);font-weight:400;font-size:.72rem;letter-spacing:.08em;color:#fff;display:block}
+.sw{display:flex;height:10px;margin:.55rem 0 .45rem;border-radius:2px;overflow:hidden}
+.sw i{display:block;height:100%}
+.acc{display:flex;gap:.3rem}.acc i{width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,.2)}
+.plate .m{font-family:var(--mono);font-size:.55rem;color:var(--ag2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem;margin-top:.35rem}
+#lb{position:fixed;inset:0;z-index:100;background:rgba(2,4,8,.94);display:none;align-items:center;justify-content:center;padding:3vw;cursor:zoom-out}
+#lb.on{display:flex}#lb img{max-width:100%;max-height:100%;box-shadow:0 0 80px rgba(58,215,255,.2)}
+.hash{font-family:var(--mono);font-size:.58rem;line-height:1.75;word-break:break-all;color:#9fb0c8}
+.hash .k{display:block;color:var(--cy);letter-spacing:.16em;margin-top:.5rem}
+.mint{margin-top:1rem;font-family:var(--disp);font-size:.8rem;letter-spacing:.14em;padding:.9rem;text-align:center;border:1px solid var(--bd2);color:var(--ag2)}
+.mint.green{color:var(--ok);border-color:rgba(77,255,184,.5);box-shadow:0 0 30px rgba(77,255,184,.12) inset}
+.caveat{border-left:2px solid var(--au);padding:.7rem 1rem;background:rgba(241,204,143,.05);font-size:.92rem;color:#c8bfae;margin-top:1.2rem}
+.caveat b{color:var(--au)}
+.band{position:relative;margin:3rem 0 0;height:340px;background:url(assets/main-brain-p32.jpg) center/cover;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.band::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--ink),rgba(3,6,12,.2) 40%,rgba(3,6,12,.2) 60%,var(--ink))}
+.band .q{position:absolute;z-index:2;left:6vw;bottom:2.4rem;max-width:36rem;font-family:var(--disp);font-size:clamp(1rem,2vw,1.5rem);line-height:1.4;letter-spacing:.04em}
+footer{padding:3rem 4vw;border-top:1px solid var(--bd);display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;font-family:var(--mono);font-size:.56rem;letter-spacing:.14em;color:#5d6880;line-height:1.9;margin-top:4rem}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.hero-sol,.hero-sol img{animation:none}.reveal{opacity:1;transform:none;transition:none}}
+@media (max-width:1100px){.hero{grid-template-columns:1fr;padding-top:6rem}.hero-sol{width:min(360px,80%);order:-1}.grid2,.lab{grid-template-columns:1fr}.comp{grid-template-columns:repeat(2,1fr)}.gen,.grid3{grid-template-columns:1fr 1fr}.plates{grid-template-columns:1fr 1fr}.plate,.plate:nth-child(4),.plate:nth-child(5){grid-column:span 1}}
+@media (max-width:640px){body{font-size:16px}nav{padding:.65rem 1rem}nav .brand{font-size:.6rem;letter-spacing:.2em}nav .links{display:none}.stats{grid-template-columns:repeat(2,1fr)}.facs,.comp,.gen,.grid3,.plates{grid-template-columns:1fr}#field{height:420px}section{padding:4rem 1.1rem 1.5rem}.hero{padding:5.5rem 1.1rem 3rem}.band{height:220px}}
+</style>
+</head>
+<body>
+<nav><div class="brand chrome">SOLSTICIO · BRILLIANCE BRIDGE</div>
+<div class="links"><a href="#octave">OCTAVE</a><a href="#compound">LEVEL II</a><a href="#field-sec">LEVEL III</a><a href="#ledger">LEDGER</a><a href="#lab">ASCENSION LAB</a><a href="#proof">PROOF</a><a href="#plates">PLATES</a><a href="#evidence">EVIDENCE</a></div></nav>
+
+<header class="hero">
+  <div class="hero-bg" id="hero-bg"></div><canvas id="hero-fx"></canvas>
+  <div class="hero-txt">
+    <div class="kicker">AI INNOVATION BRIDGE · SHOWCASE 01</div>
+    <h1><span class="chrome">BRILLIANCE</span><br><span class="gold">BRIDGE</span><small class="cyan">FLOW · PRECISION · STEALTH · SPEED</small></h1>
+    <p class="lede">Every test, contract, proof and design artefact in the corpus is read the same way: <b>eight faculties</b>, scored from what the text says and how the code is built. Pairs of faculties compose into <b>second-order compounds</b>; the whole corpus becomes a <b>brilliance field</b> you can walk, re-weight, paint with — and re-seal in four hash layers, right here.</p>
+    <div class="stats">
+      <div class="stat"><b id="s-docs">0</b><span>DOCUMENTS</span></div>
+      <div class="stat"><b id="s-tok">0</b><span>TOKENS READ</span></div>
+      <div class="stat"><b id="s-bri">0</b><span>CORPUS BRILLIANCE</span></div>
+      <div class="stat"><b id="s-har">0</b><span>HARMONY</span></div>
+      <div class="stat"><b id="s-prf">—</b><span>HERMES PROOF</span></div>
+    </div>
+  </div>
+  <div class="hero-sol"><div class="orb"></div><img src="assets/sol-sovereign.jpg" alt="Sol — Solsticio sovereign figure"></div>
+</header>
+
+<section id="octave" class="reveal">
+  <div class="sec"><span class="k">01</span><h2 class="chrome">THE OCTAVE</h2><span class="ln"></span><span class="nt">eight faculties · corpus centroid · per-document overlay</span></div>
+  <p class="lede2">Each faculty is a stem lexicon plus structural code signals — <b>asserts, proof checks, hash calls</b> feed confidence; <b>health/status probes</b> feed awareness; <b>generate / pipeline / Llama</b> calls feed intelligence. Density is hits per thousand tokens, normalised to the corpus peak, so 100 means "the most of this faculty anywhere in the corpus".</p>
+  <div class="grid2">
+    <div class="panel"><div class="ptitle"><span>OCTAVE RADAR</span><span class="tag c" id="radar-tag">CENTROID</span></div><div class="pb">
+      <svg id="radar" viewBox="0 0 560 520"></svg>
+      <div class="tools" style="margin:0"><select id="doc-pick" aria-label="Overlay document"></select><button class="tag" id="doc-clear">CLEAR OVERLAY</button></div>
+    </div></div>
+    <div><div class="facs" id="facs"></div><div class="sel" id="lex"></div></div>
+  </div>
+</section>
+
+<section id="compound" class="reveal">
+  <div class="sec"><span class="k">02</span><h2 class="gold">LEVEL II · COMPOUND FACULTIES</h2><span class="ln"></span><span class="nt">√(a·b) over the centroid — high only when both parents are</span></div>
+  <p class="lede2">Brilliance is rarely one faculty. A geometric pairing punishes imbalance: <b>credible optimism</b> needs hope <i>and</i> confidence; <b>reflective growth</b> needs awareness <i>and</i> self-improvement. The weakest pair is where the next iteration should spend its effort.</p>
+  <div class="comp" id="comp"></div>
+</section>
+
+<section id="field-sec" class="reveal">
+  <div class="sec"><span class="k">03</span><h2 class="chrome">LEVEL III · BRILLIANCE FIELD</h2><span class="ln"></span><span class="nt">PCA of 8-D faculty space · Gaussian potential · iso-contours</span></div>
+  <p class="lede2">The eight-dimensional faculty vectors are projected onto their two principal axes (power iteration, computed in your browser). Every document emits a Gaussian potential weighted by its brilliance; the contours are the sum. <b>Hover a node</b> for its dossier — peaks are where the corpus concentrates its craft.</p>
+  <div class="panel field-wrap"><canvas id="field"></canvas>
+    <div class="panel dossier" id="dossier"><div class="ptitle"><span>DOSSIER</span><span class="tag c" id="d-kind"></span></div><div class="pb" id="d-body"></div></div>
+  </div>
+  <div class="legend" id="legend"></div>
+  <div class="sel" id="pca-note"></div>
+</section>
+
+<section id="ledger" class="reveal">
+  <div class="sec"><span class="k">04</span><h2 class="chrome">CORPUS LEDGER</h2><span class="ln"></span><span class="nt">sortable · filterable · private files fingerprinted only</span></div>
+  <div class="tools"><input type="search" id="q" placeholder="filter documents…" aria-label="Filter documents"><span id="kinds" class="tools" style="margin:0"></span></div>
+  <div class="panel"><div class="tblwrap"><table class="tbl" id="tbl"></table></div></div>
+</section>
+
+<div class="band"><div class="q chrome">“Nothing passes a gate that cannot be shown.”<div class="mono cyan" style="font-size:.6rem;letter-spacing:.2em;margin-top:.8rem">OUR_POWER · MAIN BRAIN P32 · EVIDENCE BEFORE AUTHORITY</div></div></div>
+
+<section id="lab" class="reveal">
+  <div class="sec"><span class="k">05</span><h2 class="gold">ASCENSION LAB</h2><span class="ln"></span><span class="nt">re-weight the octave · re-rank the corpus · paint the field</span></div>
+  <p class="lede2">Weights reshape both a <b>weighted geometric brilliance</b> ranking and a generative flow field: intelligence sets velocity, style sets curl, joy widens the hue span, confidence steadies the strokes, awareness adds particles, self-improvement lengthens memory, hope lifts the drift, talent sharpens the line. The seed is the manifest seal. <b>MINT</b> hashes your composition into a QDP receipt.</p>
+  <div class="lab">
+    <div class="panel"><div class="ptitle"><span>WEIGHTS</span><button class="tag" id="w-reset">RESET</button></div><div class="pb" id="sliders"></div></div>
+    <div>
+      <div class="panel"><div class="ptitle"><span>FLOW FIELD · LIVE</span><span class="tag au" id="art-tag">SEED —</span></div><div class="pb"><canvas id="art"></canvas>
+        <div class="tools" style="margin:.8rem 0 0"><button class="btn" id="art-run">REPAINT</button><button class="btn au" id="art-mint">MINT COMPOSITION</button><button class="btn" id="art-png">EXPORT PNG</button></div>
+        <div class="receipt" id="receipt">No composition minted yet.</div></div></div>
+      <div class="panel" style="margin-top:1.2rem"><div class="ptitle"><span>WEIGHTED RANKING · TOP 8</span><span class="tag c" id="rank-tag">—</span></div><div class="pb"><div class="rank" id="rank"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="proof" class="reveal">
+  <div class="sec"><span class="k">06</span><h2 class="chrome">PROOF &amp; RUNTIME GENOME</h2><span class="ln"></span><span class="nt">observed, not inferred</span></div>
+  <p class="lede2">The Hermes Spine proof runner was executed in an EthereumJS VM (Node 22): contracts compiled with solc, deployed, and the doctor stage asserted. Results are shown exactly as observed — <b>failures included</b>. Alongside, the three Intel inference tests in this repo, reduced to their runtime genome.</p>
+  <div class="grid2">
+    <div class="panel"><div class="ptitle"><span>HERMES SPINE · T1 DOCTOR</span><span class="tag" id="proof-tag">—</span></div><div class="pb" id="proof-rows"></div></div>
+    <div class="gen" id="genome" style="grid-template-columns:1fr"></div>
+  </div>
+</section>
+
+<section id="plates" class="reveal">
+  <div class="sec"><span class="k">07</span><h2 class="gold">PLATES · STYLE GENOME</h2><span class="ln"></span><span class="nt">median-cut palette · Hasler–Süsstrunk colourfulness · edge density · mirror symmetry</span></div>
+  <div class="plates" id="plate-grid"></div>
+</section>
+
+<section id="evidence" class="reveal">
+  <div class="sec"><span class="k">08</span><h2 class="chrome">EVIDENCE</h2><span class="ln"></span><span class="nt">brilliance.qdp.json · browser re-seal · four layers</span></div>
+  <div class="grid2">
+    <div class="panel"><div class="ptitle"><span>MANIFEST SEAL · AS MINTED</span><span class="tag au">QDP</span></div><div class="pb hash" id="seal"></div></div>
+    <div class="panel"><div class="ptitle"><span>BROWSER RE-SEAL · LIVE</span><span class="tag" id="keccak-tag">KECCAK SELF-TEST …</span></div><div class="pb"><div id="checks"></div><div class="mint" id="mint">VERIFYING…</div></div></div>
+  </div>
+  <div class="caveat"><b>Honesty clause.</b> The eight faculties are text-feature indices computed by <span class="mono">extract_brilliance.py</span>. They describe what documents talk about and how they are built. They are <b>not</b> measurements of awareness, feeling, hope or sentience in any model — the consciousness paper in the corpus is scored like any other text, not taken as evidence. Private uploads contribute only a SHA-256 fingerprint and their faculty vector.</div>
+</section>
+
+<footer><div>SOLSTICIO · BRILLIANCE BRIDGE<br>AI INNOVATION BRIDGE · SOLUTIONS / SOLSTICIO-BRILLIANCE-BRIDGE<br>QDP · SHA-256 · SHA-512 · SHA3-256 · SHA3-512</div><div id="foot-seal">SEAL —</div></footer>
+<div id="lb"><img id="lb-img" alt=""></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const FAC=['awareness','intelligence','self_improving','confidence','hope','style','joy','talent'];
+const FNAME={awareness:'AWARENESS',intelligence:'INTELLIGENCE',self_improving:'SELF-IMPROVING',confidence:'CONFIDENCE',hope:'HOPE',style:'STYLE',joy:'JOY',talent:'TALENT'};
+const FDESC={awareness:'Observes its own state — probes, health checks, status, introspection.',intelligence:'Models, inference, reasoning, generation pipelines.',self_improving:'Loops, optimisation, feedback, tuning, recursion.',confidence:'Proof, assertion, sealing, measurement, deterministic gates.',hope:'Vision, goals, futures, roadmaps, wellbeing.',style:'Design, palette, typography, motion, aesthetic intent.',joy:'Play, delight, wonder, light, celebration.',talent:'Craft, precision, mastery, performance.'};
+const KCOL={'repo-test':'#3ad7ff',contract:'#f1cc8f',proof:'#4dffb8',document:'#ff3fb4',source:'#9aa7ff'};
+let M=null;
+const RC=[1n,0x8082n,0x800000000000808an,0x8000000080008000n,0x808bn,0x80000001n,0x8000000080008081n,0x8000000000008009n,0x8an,0x88n,0x80008009n,0x8000000an,0x8000808bn,0x800000000000008bn,0x8000000000008089n,0x8000000000008003n,0x8000000000008002n,0x8000000000000080n,0x800an,0x800000008000000an,0x8000000080008081n,0x8000000000008080n,0x80000001n,0x8000000080008008n];
+const ROT=[0,1,62,28,27,36,44,6,55,20,3,10,43,25,39,41,45,15,21,8,18,2,61,56,14];
+const M64=(1n<<64n)-1n,rol=(x,n)=>n?((x<<BigInt(n))|(x>>BigInt(64-n)))&M64:x;
+function keccakF(A){for(let r=0;r<24;r++){const C=[],D=[];
+  for(let x=0;x<5;x++)C[x]=A[x]^A[x+5]^A[x+10]^A[x+15]^A[x+20];
+  for(let x=0;x<5;x++)D[x]=C[(x+4)%5]^rol(C[(x+1)%5],1);
+  for(let i=0;i<25;i++)A[i]^=D[i%5];
+  const B=new Array(25);
+  for(let x=0;x<5;x++)for(let y=0;y<5;y++)B[y+5*((2*x+3*y)%5)]=rol(A[x+5*y],ROT[x+5*y]);
+  for(let x=0;x<5;x++)for(let y=0;y<5;y++)A[x+5*y]=B[x+5*y]^((~B[(x+1)%5+5*y]&M64)&B[(x+2)%5+5*y]);
+  A[0]^=RC[r]}}
+function sha3(bytes,bits){const rate=200-bits/4,A=new Array(25).fill(0n),n=bytes.length,pad=rate-(n%rate),buf=new Uint8Array(n+pad);
+  buf.set(bytes);buf[n]=0x06;buf[n+pad-1]|=0x80;
+  for(let off=0;off<buf.length;off+=rate){for(let i=0;i<rate/8;i++){let v=0n;for(let j=7;j>=0;j--)v=(v<<8n)|BigInt(buf[off+i*8+j]);A[i]^=v}keccakF(A)}
+  let hex='';for(let i=0;i<bits/64;i++){let v=A[i];for(let j=0;j<8;j++){hex+=Number(v&0xffn).toString(16).padStart(2,'0');v>>=8n}}return hex}
+const hex=buf=>[...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('');
+async function qdp(bytes){return{
+  sha256:hex(await crypto.subtle.digest('SHA-256',bytes)),
+  sha512:hex(await crypto.subtle.digest('SHA-512',bytes)),
+  sha3_256:sha3(bytes,256),sha3_512:sha3(bytes,512)}}
+const canon=v=>Array.isArray(v)?'['+v.map(canon).join(',')+']':(v&&typeof v==='object')?'{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+canon(v[k])).join(',')+'}':JSON.stringify(v);
+const enc=s=>new TextEncoder().encode(s);
+const KECCAK_OK=sha3(new Uint8Array(0),256)==='a7ffc6f8bf1ed76651c14756a061d662f580ff4de43b49fa82d80a4b80f8434a'&&sha3(new Uint8Array(0),512).startsWith('a69f73cca23a9ac5c8b567dc185a756e97c982164fe25859e0d1dcc1475c80a6');
+$('#keccak-tag').textContent=KECCAK_OK?'KECCAK SELF-TEST PASS':'KECCAK SELF-TEST FAIL';$('#keccak-tag').className='tag '+(KECCAK_OK?'ok':'no');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function countUp(el,v,dec=0){if(RM){el.textContent=v.toFixed(dec);return}const t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/1400),e=1-Math.pow(1-k,3);el.textContent=(v*e).toLocaleString(undefined,{minimumFractionDigits:dec,maximumFractionDigits:dec});if(k<1)requestAnimationFrame(f)})(t0)}
+function rng(seed){let a=seed>>>0;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const geo=(v,w)=>{let s=0,ws=0;v.forEach((x,i)=>{const wi=w?w[i]:1;s+=wi*Math.log(Math.max(x,1));ws+=wi});return ws?Math.exp(s/ws):1};
+
+// HERO FX — perspective grid + rising droplets
+function heroFx(){const c=$('#hero-fx'),x=c.getContext('2d');let W,H,drops=[];const R=rng(7);
+  function size(){W=c.width=c.offsetWidth*devicePixelRatio;H=c.height=c.offsetHeight*devicePixelRatio;drops=Array.from({length:70},()=>({x:R()*W,y:R()*H,r:(R()*2+.6)*devicePixelRatio,v:(R()*.4+.15)*devicePixelRatio}))}
+  size();addEventListener('resize',size);let t=0;
+  (function frame(){x.clearRect(0,0,W,H);const hz=H*.62;x.strokeStyle='rgba(58,215,255,.16)';x.lineWidth=1;
+    for(let i=-20;i<=20;i++){x.beginPath();x.moveTo(W/2+i*W*.02,hz);x.lineTo(W/2+i*W*.16,H);x.stroke()}
+    for(let j=0;j<14;j++){const p=((j+t*.02)%14)/14,y=hz+(H-hz)*p*p;x.globalAlpha=p;x.beginPath();x.moveTo(0,y);x.lineTo(W,y);x.stroke()}x.globalAlpha=1;
+    for(const d of drops){d.y-=d.v;if(d.y<-10){d.y=H+10;d.x=R()*W}const g=x.createRadialGradient(d.x,d.y,0,d.x,d.y,d.r*4);g.addColorStop(0,'rgba(190,235,255,.9)');g.addColorStop(1,'rgba(58,215,255,0)');x.fillStyle=g;x.beginPath();x.arc(d.x,d.y,d.r*4,0,7);x.fill()}
+    t++;if(!RM)requestAnimationFrame(frame)})()
+  addEventListener('scroll',()=>{$('#hero-bg').style.transform=`scale(1.08) translateY(${scrollY*.18}px)`},{passive:true})}
+
+// OCTAVE
+let overlay=null,focusFac=null;
+function radar(){const s=$('#radar'),cx=280,cy=262,R=200,n=8,pt=(i,v)=>{const a=-Math.PI/2+i*2*Math.PI/n;return[cx+Math.cos(a)*R*v/100,cy+Math.sin(a)*R*v/100]};
+  let g='<defs><radialGradient id="rg"><stop offset="0" stop-color="#3ad7ff" stop-opacity=".45"/><stop offset="1" stop-color="#2f6bff" stop-opacity=".08"/></radialGradient><filter id="gl"><feGaussianBlur stdDeviation="3"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
+  for(const r of [20,40,60,80,100])g+=`<polygon points="${FAC.map((_,i)=>pt(i,r).join(',')).join(' ')}" fill="none" stroke="rgba(120,170,255,${r===100?.3:.12})"/>`;
+  FAC.forEach((f,i)=>{const [x,y]=pt(i,100),[lx,ly]=pt(i,118);g+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="rgba(120,170,255,.12)"/><text x="${lx}" y="${ly}" fill="${focusFac===f?'#3ad7ff':'#8994a8'}" font-family="JetBrains Mono" font-size="11" letter-spacing="1.5" text-anchor="middle" dominant-baseline="middle">${FNAME[f]}</text>`});
+  const poly=(v,fill,stroke,op)=>`<polygon points="${FAC.map((f,i)=>pt(i,v[f]).join(',')).join(' ')}" fill="${fill}" stroke="${stroke}" stroke-width="1.6" opacity="${op}" filter="url(#gl)"/>`+FAC.map((f,i)=>{const [x,y]=pt(i,v[f]);return `<circle cx="${x}" cy="${y}" r="3.2" fill="${stroke}"/>`}).join('');
+  const peak=Math.max(...FAC.map(f=>M.centroid[f])),scaled=Object.fromEntries(FAC.map(f=>[f,M.centroid[f]/peak*100]));
+  g+=poly(scaled,'url(#rg)','#3ad7ff',1);
+  if(overlay){const d=M.documents.find(x=>x.id===overlay);g+=poly(d.faculties,'rgba(241,204,143,.12)','#f1cc8f',.95)}
+  g+=`<text x="${cx}" y="${cy}" fill="#fff" font-family="Michroma" font-size="20" text-anchor="middle" dominant-baseline="middle">${(overlay?M.documents.find(x=>x.id===overlay).brilliance:M.corpus_brilliance).toFixed(1)}</text>`;
+  s.innerHTML=g;$('#radar-tag').textContent=overlay?'OVERLAY · '+M.documents.find(x=>x.id===overlay).label.split('/').pop().slice(0,28).toUpperCase():'CENTROID · SCALED TO PEAK'}
+function facs(){const v=overlay?M.documents.find(x=>x.id===overlay).faculties:M.centroid;
+  $('#facs').innerHTML=FAC.map(f=>`<div class="fac${focusFac===f?' on':''}" data-f="${f}"><div class="n"><span>${FNAME[f]}</span><b>${v[f].toFixed(1)}</b></div><div class="bar"><i style="width:${v[f]}%"></i></div><p>${FDESC[f]}</p></div>`).join('');
+  $$('.fac').forEach(e=>e.addEventListener('click',()=>{focusFac=focusFac===e.dataset.f?null:e.dataset.f;$('#lex').innerHTML=focusFac?`LEXICON · ${FNAME[focusFac]} → ${M.lexicon[focusFac].map(esc).join(' · ')}`:'';facs();radar()}))}
+
+// LEVEL II
+function compounds(){const C=M.compound_pairs;$('#comp').innerHTML=Object.entries(M.compounds).sort((a,b)=>b[1]-a[1]).map(([k,v],i,arr)=>{const [a,b]=C[k],weak=i===arr.length-1;
+  return `<div class="cp"><div class="t">${k.replace(/_/g,' ').toUpperCase()}${weak?' · NEXT FRONTIER':''}</div><div class="v ${weak?'gold':'chrome'}">${v.toFixed(1)}</div><div class="f">√(${FNAME[a]} ${M.centroid[a]} × ${FNAME[b]} ${M.centroid[b]})</div>
+  <svg width="90" height="90" viewBox="0 0 90 90"><circle cx="45" cy="45" r="36" fill="none" stroke="rgba(120,170,255,.15)" stroke-width="3"/><circle cx="45" cy="45" r="36" fill="none" stroke="${weak?'#f1cc8f':'#3ad7ff'}" stroke-width="3" stroke-dasharray="${2*Math.PI*36*v/50} 999" transform="rotate(-90 45 45)"/></svg></div>`}).join('')}
+
+// LEVEL III — PCA + field
+function pca(X){const n=X.length,d=X[0].length,mu=Array(d).fill(0);X.forEach(r=>r.forEach((v,j)=>mu[j]+=v/n));const Z=X.map(r=>r.map((v,j)=>v-mu[j]));
+  const C=Array.from({length:d},(_,i)=>Array.from({length:d},(_,j)=>Z.reduce((s,r)=>s+r[i]*r[j],0)/(n-1)));
+  const tot=C.reduce((s,r,i)=>s+r[i],0),vecs=[],vals=[];let A=C.map(r=>r.slice());
+  for(let k=0;k<2;k++){let v=Array(d).fill(0).map((_,i)=>1/(i+1+k));for(let it=0;it<200;it++){const w=A.map(r=>r.reduce((s,a,j)=>s+a*v[j],0)),nn=Math.hypot(...w)||1;v=w.map(x=>x/nn)}
+    const lam=v.reduce((s,vi,i)=>s+vi*A[i].reduce((t,a,j)=>t+a*v[j],0),0);vecs.push(v);vals.push(lam);A=A.map((r,i)=>r.map((a,j)=>a-lam*v[i]*v[j]))}
+  return{P:Z.map(r=>vecs.map(v=>r.reduce((s,x,j)=>s+x*v[j],0))),vecs,explained:vals.map(l=>l/tot)}}
+let FP=null;
+function field(){const c=$('#field'),x=c.getContext('2d'),dpr=devicePixelRatio,W=c.width=c.offsetWidth*dpr,H=c.height=c.offsetHeight*dpr,docs=M.documents;
+  if(!FP){FP=pca(docs.map(d=>FAC.map(f=>d.faculties[f])));const loads=FP.vecs.map(v=>FAC.map((f,i)=>[f,v[i]]).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1])).slice(0,2).map(([f,w])=>`${FNAME[f]} ${w>0?'+':''}${w.toFixed(2)}`).join(', '));
+    $('#pca-note').textContent=`PC1 ${(FP.explained[0]*100).toFixed(1)}% variance (${loads[0]}) · PC2 ${(FP.explained[1]*100).toFixed(1)}% (${loads[1]}) · σ = 11% of the short side`}
+  const xs=FP.P.map(p=>p[0]),ys=FP.P.map(p=>p[1]),[x0,x1,y0,y1]=[Math.min(...xs),Math.max(...xs),Math.min(...ys),Math.max(...ys)],pad=60*dpr;
+  const pos=FP.P.map(p=>[pad+(p[0]-x0)/(x1-x0||1)*(W-2*pad),pad+(1-(p[1]-y0)/(y1-y0||1))*(H-2*pad)]),sig=Math.min(W,H)*.11,bmax=Math.max(...docs.map(d=>d.brilliance));
+  const step=Math.max(3,Math.round(3*dpr)),img=x.createImageData(W,H),D=img.data;let pmax=0;const cols=Math.ceil(W/step),rows=Math.ceil(H/step),pot=new Float32Array(cols*rows);
+  for(let j=0;j<rows;j++)for(let i=0;i<cols;i++){let s=0;const px=i*step,py=j*step;for(let k=0;k<docs.length;k++){const dx=px-pos[k][0],dy=py-pos[k][1];s+=docs[k].brilliance/bmax*Math.exp(-(dx*dx+dy*dy)/(2*sig*sig))}pot[j*cols+i]=s;if(s>pmax)pmax=s}
+  for(let j=0;j<rows;j++)for(let i=0;i<cols;i++){const v=pot[j*cols+i]/pmax,band=(v*12)%1,line=band<.06&&v>.05?1:0,r=8+40*v+line*120*v,g=14+90*v+line*150*v,b=30+150*v+line*105;
+    for(let yy=0;yy<step;yy++)for(let xx=0;xx<step;xx++){const X=i*step+xx,Y=j*step+yy;if(X>=W||Y>=H)continue;const o=(Y*W+X)*4;D[o]=r;D[o+1]=g;D[o+2]=b;D[o+3]=255}}
+  x.putImageData(img,0,0);
+  docs.forEach((d,k)=>{const [px,py]=pos[k],r=(4+d.brilliance/bmax*12)*dpr,g=x.createRadialGradient(px,py,0,px,py,r*2.6);g.addColorStop(0,KCOL[d.kind]);g.addColorStop(1,'rgba(0,0,0,0)');x.fillStyle=g;x.beginPath();x.arc(px,py,r*2.6,0,7);x.fill();x.fillStyle='#fff';x.beginPath();x.arc(px,py,r*.35,0,7);x.fill()});
+  docs.slice(0,6).forEach(d=>{const k=docs.indexOf(d),[px,py]=pos[k];x.font=`${10*dpr}px "JetBrains Mono",monospace`;x.fillStyle='rgba(230,240,255,.85)';x.fillText(d.label.split('/').pop().slice(0,26),px+12*dpr,py-10*dpr)});
+  c.onmousemove=e=>{const b=c.getBoundingClientRect(),mx=(e.clientX-b.left)*dpr,my=(e.clientY-b.top)*dpr;let best=-1,bd=1e9;pos.forEach((p,k)=>{const dd=Math.hypot(p[0]-mx,p[1]-my);if(dd<bd){bd=dd;best=k}});
+    const dz=$('#dossier');if(bd>28*dpr){dz.classList.remove('on');return}const d=docs[best];$('#d-kind').textContent=d.kind.toUpperCase();
+    $('#d-body').innerHTML=`<b class="cyan">${esc(d.label)}</b><br>brilliance <b>${d.brilliance}</b> · harmony ${d.harmony} · coherence ${d.coherence}<br>${d.tokens.toLocaleString()} tokens · sha256 ${d.sha256.slice(0,24)}…<br>`+FAC.map(f=>`${FNAME[f].padEnd(15,'·')} ${d.faculties[f].toFixed(1)}`).join('<br>');dz.classList.add('on')};
+  c.onmouseleave=()=>$('#dossier').classList.remove('on');
+  $('#legend').innerHTML=Object.entries(KCOL).filter(([k])=>M.corpus.kinds[k]).map(([k,c])=>`<span><i style="background:${c};box-shadow:0 0 8px ${c}"></i>${k.toUpperCase()} · ${M.corpus.kinds[k]}</span>`).join('')}
+
+// LEDGER
+let sortKey='brilliance',sortDir=-1,kindF='all';
+function ledger(){const q=$('#q').value.trim().toLowerCase(),cols=['brilliance','harmony','coherence',...FAC,'tokens'];
+  const rows=M.documents.filter(d=>(kindF==='all'||d.kind===kindF)&&(!q||d.label.toLowerCase().includes(q))).sort((a,b)=>{const va=a[sortKey]??a.faculties[sortKey],vb=b[sortKey]??b.faculties[sortKey];return(va-vb)*sortDir});
+  const heat=v=>`<span class="heat" style="background:rgba(58,215,255,${(v/100*.55).toFixed(3)});color:${v>55?'#03060c':'#c9d3e3'}">${v.toFixed(1)}</span>`;
+  $('#tbl').innerHTML=`<thead><tr><th>DOCUMENT</th>${cols.map(c=>`<th data-k="${c}" class="${c===sortKey?'on':''}">${(FNAME[c]||c.toUpperCase()).slice(0,10)}${c===sortKey?(sortDir<0?' ↓':' ↑'):''}</th>`).join('')}</tr></thead><tbody>`+
+    rows.map(d=>`<tr><td title="${esc(d.label)}"><span style="color:${KCOL[d.kind]}">●</span> ${esc(d.label)}</td><td>${d.brilliance.toFixed(2)}</td><td>${d.harmony.toFixed(3)}</td><td>${d.coherence.toFixed(3)}</td>${FAC.map(f=>`<td>${heat(d.faculties[f])}</td>`).join('')}<td>${d.tokens.toLocaleString()}</td></tr>`).join('')+'</tbody>';
+  $$('#tbl th[data-k]').forEach(th=>th.addEventListener('click',()=>{if(sortKey===th.dataset.k)sortDir*=-1;else{sortKey=th.dataset.k;sortDir=-1}ledger()}));
+  $('#kinds').innerHTML=['all',...Object.keys(M.corpus.kinds)].map(k=>`<button class="tag${k===kindF?' on':''}" data-k="${k}">${k.toUpperCase()} · ${k==='all'?M.corpus.documents:M.corpus.kinds[k]}</button>`).join('');
+  $$('#kinds button').forEach(b=>b.addEventListener('click',()=>{kindF=b.dataset.k;ledger()}))}
+
+// ASCENSION LAB
+const W0=Object.fromEntries(FAC.map(f=>[f,1]));let WT={...W0},SEED=1,PAL=['#3ad7ff','#2f6bff','#f1cc8f','#ff3fb4','#c9d3e3'];
+const SLH={awareness:'particles',intelligence:'velocity',self_improving:'trail memory',confidence:'stroke steadiness',hope:'upward drift',style:'curl',joy:'hue span',talent:'line precision'};
+function sliders(){$('#sliders').innerHTML=FAC.map(f=>`<div class="sl"><label>${FNAME[f]}<b id="w-${f}">${WT[f].toFixed(2)}</b></label><input type="range" min="0" max="3" step="0.05" value="${WT[f]}" data-f="${f}" aria-label="${FNAME[f]} weight"><small>art → ${SLH[f]}</small></div>`).join('');
+  $$('#sliders input').forEach(i=>i.addEventListener('input',()=>{WT[i.dataset.f]=+i.value;$('#w-'+i.dataset.f).textContent=(+i.value).toFixed(2);rank();scheduleArt()}))}
+function rank(){const w=FAC.map(f=>WT[f]),r=M.documents.map(d=>({d,s:geo(FAC.map(f=>d.faculties[f]),w)})).sort((a,b)=>b.s-a.s);
+  $('#rank').innerHTML=r.slice(0,8).map((x,i)=>`<div><span><span style="color:${KCOL[x.d.kind]}">${String(i+1).padStart(2,'0')}</span> ${esc(x.d.label)}</span><b class="cyan">${x.s.toFixed(2)}</b></div>`).join('');
+  $('#rank-tag').textContent='CORPUS · '+geo(FAC.map(f=>M.centroid[f]),w).toFixed(2)}
+let artT=null,artRAF=null;const scheduleArt=()=>{clearTimeout(artT);artT=setTimeout(paint,140)};
+function hexRgb(h){const n=parseInt(h.slice(1),16);return[n>>16&255,n>>8&255,n&255]}
+function paint(){cancelAnimationFrame(artRAF);const c=$('#art'),x=c.getContext('2d'),dpr=Math.min(devicePixelRatio,2),W=c.width=c.offsetWidth*dpr,H=c.height=c.offsetHeight*dpr,R=rng(SEED),w=WT;
+  x.fillStyle='#02040a';x.fillRect(0,0,W,H);const N=Math.round(180+w.awareness*260),speed=(.6+w.intelligence*1.1)*dpr,curl=.6+w.style*1.4,hue=.15+w.joy*.28,steady=Math.min(.95,.25+w.confidence*.22),fade=Math.max(.012,.09-w.self_improving*.026),lift=w.hope*.35,lw=Math.max(.35,1.6-w.talent*.4)*dpr;
+  const s1=R()*10,s2=R()*10,s3=R()*10,f=2.4/W,cols=PAL.map(hexRgb);
+  const P=Array.from({length:N},()=>({x:R()*W,y:R()*H,c:Math.floor(R()*cols.length),l:0}));let frames=0;
+  const ang=(px,py)=>(Math.sin(px*f+s1)+Math.sin(py*f*1.31+s2)+Math.sin((px+py)*f*.73+s3)+Math.sin(Math.hypot(px-W/2,py-H/2)*f*1.7))*Math.PI*curl*.5;
+  (function step(){x.fillStyle=`rgba(2,4,10,${fade})`;x.fillRect(0,0,W,H);x.lineWidth=lw;x.globalCompositeOperation='lighter';
+    for(const p of P){const a=ang(p.x,p.y)+(R()-.5)*(1-steady),nx=p.x+Math.cos(a)*speed,ny=p.y+Math.sin(a)*speed-lift*dpr;const [r,g,b]=cols[p.c],h=Math.sin(p.l*.02*hue)*.5+.5;
+      x.strokeStyle=`rgba(${Math.round(r*(1-hue)+255*hue*h)},${g},${Math.round(b*(1-hue*h)+60*hue)},${.18+steady*.25})`;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(nx,ny);x.stroke();p.x=nx;p.y=ny;p.l++;
+      if(p.x<0||p.x>W||p.y<0||p.y>H||R()<.003){p.x=R()*W;p.y=R()*H;p.l=0}}
+    x.globalCompositeOperation='source-over';frames++;if(frames<(RM?60:420))artRAF=requestAnimationFrame(step)})()}
+async function mint(){const comp={seed:SEED,weights:WT,manifest_sha256:M.qdp_seal.sha256,palette:PAL,canvas:[$('#art').width,$('#art').height]};const h=await qdp(enc(canon(comp)));
+  $('#receipt').innerHTML=`<b>COMPOSITION RECEIPT</b> · ${new Date().toISOString()}<br>`+Object.entries(h).map(([k,v])=>`<b>${k.toUpperCase()}</b> ${v}`).join('<br>')}
+
+// PROOF + GENOME
+function proof(){const p=M.proof_run;if(!p){$('#proof-rows').innerHTML='<span class="dim">No proof run recorded in this manifest.</span>';$('#proof-tag').textContent='NOT RUN';return}
+  $('#proof-tag').textContent=`${p.passed}/${p.total} PASS · AS OBSERVED`;$('#proof-tag').className='tag '+(p.passed===p.total?'ok':'au');
+  $('#proof-rows').innerHTML=p.checks.map(c=>`<div class="check"><span>${c.id} · ${esc(c.label)}</span><span class="r ${c.pass?'ok':'no'}">${c.pass?'PASS':'FAIL'}</span></div>`).join('')+`<div class="sel">${esc(p.runner)}. Failures are kept: they mark decoding/pin mismatches the runner itself must resolve before the spine can be called proven.</div>`;
+  $('#genome').innerHTML=M.runtime_genome.map(g=>`<div class="gc"><h4>${esc(g.file)}</h4><dl><dt>engine</dt><dd>${esc(g.engine)}</dd><dt>model</dt><dd>${esc(g.default_model||'—')}</dd><dt>precision</dt><dd>${esc(g.quantisation)}</dd><dt>prompt</dt><dd>${esc(g.prompt||'—')}</dd><dt>lines</dt><dd>${g.lines}</dd></dl></div>`).join('')}
+
+// PLATES
+function plates(){$('#plate-grid').innerHTML=M.plates.map(p=>{const g=p.genome;return `<figure class="plate" data-src="assets/${p.file}"><img src="assets/${p.file}" alt="${esc(p.title)}" loading="lazy"><div class="cap"><b>${esc(p.title)}</b>
+  <div class="sw">${g.palette.map(c=>`<i style="background:${c.hex};width:${c.share*100}%"></i>`).join('')}</div><div class="acc">${g.accents.map(a=>`<i style="background:${a}"></i>`).join('')}</div>
+  <div class="m"><span>${g.width}×${g.height}</span><span>colourful ${g.colourfulness}</span><span>edges ${g.edge_density}</span><span>symmetry ${g.symmetry}</span></div></div></figure>`}).join('');
+  $$('.plate').forEach(f=>f.addEventListener('click',()=>{$('#lb-img').src=f.dataset.src;$('#lb').classList.add('on')}));$('#lb').addEventListener('click',()=>$('#lb').classList.remove('on'));addEventListener('keydown',e=>{if(e.key==='Escape')$('#lb').classList.remove('on')})}
+
+// EVIDENCE
+async function verify(){const seal=M.qdp_seal;$('#seal').innerHTML=Object.entries(seal).map(([k,v])=>`<span class="k">${k.toUpperCase()}</span>${v}`).join('');
+  const body={...M};delete body.qdp_seal;const live=await qdp(enc(canon(body)));let ok=0,n=0,html='';
+  for(const k of Object.keys(seal)){n++;const g=live[k]===seal[k];if(g)ok++;html+=`<div class="check"><span>manifest · ${k}</span><span class="r ${g?'ok':'no'}">${g?'MATCH':'MISMATCH'}</span></div>`}
+  for(const p of M.plates){n++;try{const h=hex(await crypto.subtle.digest('SHA-256',await (await fetch('assets/'+p.file)).arrayBuffer()));const g=h===p.sha256;if(g)ok++;html+=`<div class="check"><span>${p.file} · sha256</span><span class="r ${g?'ok':'no'}">${g?'MATCH':'MISMATCH'}</span></div>`}
+    catch(e){html+=`<div class="check"><span>${p.file}</span><span class="r no">FETCH FAILED</span></div>`}}
+  $('#checks').innerHTML=html;const all=ok===n&&KECCAK_OK,m=$('#mint');m.className='mint'+(all?' green':'');m.textContent=all?`MINTED_GREEN · ${ok}/${n} CHECKS · 4 LAYERS RE-SEALED`:`${ok}/${n} CHECKS · NOT MINTED`}
+
+function reveal(){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});$$('.reveal').forEach(s=>io.observe(s));
+  const nav=$$('nav .links a'),so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)nav.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});$$('section[id]').forEach(s=>so.observe(s))}
+
+async function boot(){heroFx();reveal();
+  try{M=await (await fetch('assets/brilliance.qdp.json',{cache:'no-store'})).json()}catch(e){$('.lede').innerHTML='<b>Manifest unavailable.</b> Serve this folder over HTTP (python3 -m http.server) — file:// blocks fetch and Web Crypto.';return}
+  countUp($('#s-docs'),M.corpus.documents);countUp($('#s-tok'),M.corpus.tokens);countUp($('#s-bri'),M.corpus_brilliance,1);countUp($('#s-har'),M.corpus_harmony,3);
+  $('#s-prf').textContent=M.proof_run?`${M.proof_run.passed}/${M.proof_run.total}`:'—';
+  SEED=parseInt(M.qdp_seal.sha256.slice(0,8),16);$('#art-tag').textContent='SEED '+M.qdp_seal.sha256.slice(0,8).toUpperCase();
+  const acc=M.plates.flatMap(p=>p.genome.accents);if(acc.length)PAL=['#3ad7ff','#2f6bff',...acc.filter((_,i)=>i%2===0).slice(0,5),'#ff3fb4'];
+  $('#foot-seal').innerHTML=`MANIFEST SEAL<br>SHA-256 ${M.qdp_seal.sha256.slice(0,32)}…<br>${M.corpus.private_fingerprinted} PRIVATE FILES · FINGERPRINT ONLY`;
+  $('#doc-pick').innerHTML='<option value="">overlay a document…</option>'+M.documents.map(d=>`<option value="${d.id}">${esc(d.label)} · ${d.brilliance}</option>`).join('');
+  $('#doc-pick').addEventListener('change',e=>{overlay=e.target.value||null;radar();facs()});$('#doc-clear').addEventListener('click',()=>{overlay=null;$('#doc-pick').value='';radar();facs()});
+  radar();facs();compounds();field();ledger();$('#q').addEventListener('input',ledger);sliders();rank();paint();proof();plates();verify();
+  $('#w-reset').addEventListener('click',()=>{WT={...W0};sliders();rank();paint()});$('#art-run').addEventListener('click',()=>{SEED=(SEED*1664525+1013904223)>>>0;$('#art-tag').textContent='SEED '+SEED.toString(16).toUpperCase().padStart(8,'0');paint()});
+  $('#art-mint').addEventListener('click',mint);$('#art-png').addEventListener('click',()=>{const a=document.createElement('a');a.download=`brilliance-${SEED.toString(16)}.png`;a.href=$('#art').toDataURL('image/png');a.click()});
+  let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{field()},200)})}
+boot();
+</script>
+</body>
+</html>
